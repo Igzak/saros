@@ -19,6 +19,8 @@
  */
 package saros.session.internal;
 
+import static saros.session.SessionEndReason.LOCAL_USER_LEFT;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -38,6 +40,7 @@ import saros.communication.extensions.LeaveSessionExtension;
 import saros.concurrent.management.ConcurrentDocumentClient;
 import saros.context.IContainerContext;
 import saros.filesystem.IReferencePoint;
+import saros.filesystem.IReferencePointComparator;
 import saros.filesystem.IResource;
 import saros.net.IConnectionManager;
 import saros.net.ITransmitter;
@@ -52,6 +55,7 @@ import saros.session.IActivityListener;
 import saros.session.IActivityProducer;
 import saros.session.ISarosSession;
 import saros.session.ISarosSessionContextFactory;
+import saros.session.ISarosSessionManager;
 import saros.session.ISessionListener;
 import saros.session.SessionEndReason;
 import saros.session.User;
@@ -118,6 +122,8 @@ public final class SarosSession implements ISarosSession {
   private final ActivitySequencer activitySequencer;
 
   private final UserInformationHandler userListHandler;
+
+  private final IReferencePointComparator referencePointComparator;
 
   private final String sessionID;
 
@@ -228,6 +234,12 @@ public final class SarosSession implements ISarosSession {
   @Override
   public void addSharedReferencePoint(IReferencePoint referencePoint, String referencePointId) {
     if (!referencePointMapper.isShared(referencePoint)) {
+      if (wouldCreateNestedReferencePoint(referencePoint)) {
+        leaveSessionDueToNestedReferencePoint(referencePoint);
+
+        return;
+      }
+
       referencePointMapper.addReferencePoint(referencePointId, referencePoint);
 
       listenerDispatch.referencePointAdded(referencePoint);
@@ -728,6 +740,12 @@ public final class SarosSession implements ISarosSession {
   @Override
   public void addReferencePointMapping(String referencePointId, IReferencePoint referencePoint) {
     if (referencePointMapper.getReferencePoint(referencePointId) == null) {
+      if (wouldCreateNestedReferencePoint(referencePoint)) {
+        leaveSessionDueToNestedReferencePoint(referencePoint);
+
+        return;
+      }
+
       referencePointMapper.addReferencePoint(referencePointId, referencePoint);
       listenerDispatch.referencePointAdded(referencePoint);
     }
@@ -846,6 +864,8 @@ public final class SarosSession implements ISarosSession {
     userListHandler = getComponent(sessionContainer, UserInformationHandler.class);
     // Obtained from Session context END
 
+    referencePointComparator = sessionContainer.getComponent(IReferencePointComparator.class);
+
     // ensure that the container uses caching
     assert sessionContainer.getComponent(ActivityHandler.class)
             == sessionContainer.getComponent(ActivityHandler.class)
@@ -882,5 +902,63 @@ public final class SarosSession implements ISarosSession {
               + " could not be found in the current session context or application context but is required for operation");
 
     return result;
+  }
+
+  /**
+   * Returns whether adding the given reference point to the session would create nested reference
+   * points.
+   *
+   * @param addedReferencePoint the reference point to add to the session
+   * @return whether adding the given reference point to the session would create nested reference
+   *     points
+   */
+  private boolean wouldCreateNestedReferencePoint(IReferencePoint addedReferencePoint) {
+    for (IReferencePoint sharedReferencePoint : getReferencePoints()) {
+      if (referencePointComparator.areNested(addedReferencePoint, sharedReferencePoint)) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
+  /**
+   * Logs an error and leaves the session.
+   *
+   * <p>Stops the session using a different thread to prevent lockups.
+   *
+   * <p>This method should be called to end the running session if a user tried to add a new
+   * reference point that would lead to nested reference points being shared.
+   *
+   * @param addedReferencePoint the newly added reference point
+   * @see #wouldCreateNestedReferencePoint(IReferencePoint)
+   */
+  // TODO show user error message
+  private void leaveSessionDueToNestedReferencePoint(IReferencePoint addedReferencePoint) {
+    Thread stopSessionThread =
+        new Thread(
+            () -> {
+              ISarosSessionManager sarosSessionManager =
+                  sessionContainer.getComponent(ISarosSessionManager.class);
+
+              if (sarosSessionManager != null) {
+                log.error(
+                    "adding reference point "
+                        + addedReferencePoint
+                        + " would lead to nested reference points; ending session - shared reference points: "
+                        + getReferencePoints());
+
+                sarosSessionManager.stopSession(LOCAL_USER_LEFT);
+
+              } else {
+                log.error(
+                    "adding reference point "
+                        + addedReferencePoint
+                        + " would lead to nested reference points; session already in teardown - shared reference points: "
+                        + getReferencePoints());
+              }
+            });
+
+    stopSessionThread.start();
   }
 }
