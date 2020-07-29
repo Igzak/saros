@@ -8,7 +8,8 @@ import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Pattern;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.jface.bindings.keys.KeyStroke;
 import org.eclipse.jface.bindings.keys.ParseException;
 import org.eclipse.swt.custom.CTabItem;
@@ -52,7 +53,7 @@ import saros.stf.server.util.WidgetUtil;
  */
 public final class SarosView extends StfRemoteObject implements ISarosView {
 
-  private static final Logger log = Logger.getLogger(SarosView.class);
+  private static final Logger log = LogManager.getLogger(SarosView.class);
 
   private static final SarosView INSTANCE = new SarosView();
 

@@ -1,7 +1,8 @@
 package saros.stf.server.rmi.superbot.component.view.saros.impl;
 
 import java.rmi.RemoteException;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.swtbot.swt.finder.widgets.SWTBotCTabItem;
 import saros.stf.server.StfRemoteObject;
 import saros.stf.server.bot.SarosSWTBot;
@@ -12,7 +13,7 @@ import saros.stf.server.rmi.superbot.component.view.saros.IChatroom;
 
 public final class Chatroom extends StfRemoteObject implements IChatroom {
 
-  private static final Logger log = Logger.getLogger(Chatroom.class);
+  private static final Logger log = LogManager.getLogger(Chatroom.class);
 
   private static final Chatroom INSTANCE = new Chatroom();
 

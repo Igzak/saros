@@ -2,7 +2,8 @@ package saros.stf.server.rmi.controlbot.manipulation.impl;
 
 import java.rmi.RemoteException;
 import java.util.List;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.account.XMPPAccount;
 import saros.account.XMPPAccountStore;
 import saros.stf.server.StfRemoteObject;
@@ -10,7 +11,7 @@ import saros.stf.server.rmi.controlbot.manipulation.IAccountManipulator;
 
 public class AccountManipulatorImpl extends StfRemoteObject implements IAccountManipulator {
 
-  private static final Logger log = Logger.getLogger(AccountManipulatorImpl.class);
+  private static final Logger log = LogManager.getLogger(AccountManipulatorImpl.class);
 
   private static final IAccountManipulator INSTANCE = new AccountManipulatorImpl();
 

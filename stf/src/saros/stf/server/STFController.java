@@ -15,7 +15,8 @@ import java.rmi.server.UnicastRemoteObject;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.jface.dialogs.MessageDialogWithToggle;
 import org.eclipse.jface.preference.IPreferenceStore;
@@ -83,7 +84,7 @@ import saros.stf.shared.Constants;
  */
 public class STFController {
 
-  private static final transient Logger log = Logger.getLogger(STFController.class);
+  private static final transient Logger log = LogManager.getLogger(STFController.class);
 
   private static Registry registry;
 

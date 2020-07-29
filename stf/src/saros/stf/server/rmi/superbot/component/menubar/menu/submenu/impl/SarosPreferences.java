@@ -1,7 +1,8 @@
 package saros.stf.server.rmi.superbot.component.menubar.menu.submenu.impl;
 
 import java.rmi.RemoteException;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.swtbot.swt.finder.SWTBot;
 import org.eclipse.swtbot.swt.finder.waits.Conditions;
 import org.eclipse.swtbot.swt.finder.widgets.SWTBotButton;
@@ -17,7 +18,7 @@ import saros.stf.server.rmi.superbot.impl.SuperBot;
 
 public final class SarosPreferences extends StfRemoteObject implements ISarosPreferences {
 
-  private static final Logger log = Logger.getLogger(SarosPreferences.class);
+  private static final Logger log = LogManager.getLogger(SarosPreferences.class);
 
   private static final SarosPreferences INSTANCE = new SarosPreferences();
 

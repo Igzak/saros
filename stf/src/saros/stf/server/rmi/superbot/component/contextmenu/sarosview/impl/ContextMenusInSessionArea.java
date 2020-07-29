@@ -1,7 +1,8 @@
 package saros.stf.server.rmi.superbot.component.contextmenu.sarosview.impl;
 
 import java.rmi.RemoteException;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.swtbot.swt.finder.SWTBot;
 import org.eclipse.swtbot.swt.finder.waits.DefaultCondition;
 import org.eclipse.swtbot.swt.finder.widgets.SWTBotTreeItem;
@@ -13,7 +14,7 @@ import saros.stf.server.rmi.superbot.impl.SuperBot;
 public final class ContextMenusInSessionArea extends ContextMenusInSarosView
     implements IContextMenusInSessionArea {
 
-  private static final Logger log = Logger.getLogger(ContextMenusInSessionArea.class);
+  private static final Logger log = LogManager.getLogger(ContextMenusInSessionArea.class);
 
   protected JID participantJID;
 

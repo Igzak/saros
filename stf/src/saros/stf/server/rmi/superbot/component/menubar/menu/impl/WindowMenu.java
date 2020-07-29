@@ -1,7 +1,8 @@
 package saros.stf.server.rmi.superbot.component.menubar.menu.impl;
 
 import java.rmi.RemoteException;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.stf.server.StfRemoteObject;
 import saros.stf.server.rmi.remotebot.impl.RemoteWorkbenchBot;
 import saros.stf.server.rmi.remotebot.widget.IRemoteBotCombo;
@@ -13,7 +14,7 @@ import saros.stf.server.util.WidgetUtil;
 
 public final class WindowMenu extends StfRemoteObject implements IWindowMenu {
 
-  private static final Logger log = Logger.getLogger(WindowMenu.class);
+  private static final Logger log = LogManager.getLogger(WindowMenu.class);
   private static final WindowMenu INSTANCE = new WindowMenu();
 
   public static WindowMenu getInstance() {

@@ -5,7 +5,8 @@ import static org.eclipse.swtbot.swt.finder.matchers.WidgetMatcherFactory.widget
 
 import java.rmi.RemoteException;
 import java.util.List;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.swt.custom.StyledText;
 import org.eclipse.swtbot.eclipse.finder.widgets.SWTBotView;
 import org.eclipse.swtbot.swt.finder.exceptions.WidgetNotFoundException;
@@ -21,7 +22,7 @@ import saros.stf.server.rmi.superbot.component.view.eclipse.IConsoleView;
 
 public final class ConsoleView extends StfRemoteObject implements IConsoleView {
 
-  private static final Logger log = Logger.getLogger(ConsoleView.class);
+  private static final Logger log = LogManager.getLogger(ConsoleView.class);
 
   private static final ConsoleView INSTANCE = new ConsoleView();
 

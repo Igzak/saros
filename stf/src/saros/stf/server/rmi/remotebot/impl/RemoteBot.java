@@ -5,7 +5,8 @@ import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.swtbot.swt.finder.SWTBot;
 import org.eclipse.swtbot.swt.finder.exceptions.WidgetNotFoundException;
@@ -52,7 +53,7 @@ import saros.stf.server.rmi.remotebot.widget.impl.RemoteBotTree;
 
 public abstract class RemoteBot extends StfRemoteObject implements IRemoteBot {
 
-  private static final Logger log = Logger.getLogger(RemoteBot.class);
+  private static final Logger log = LogManager.getLogger(RemoteBot.class);
   private static final File SCREENSHOT_DIRECTORY;
 
   static {

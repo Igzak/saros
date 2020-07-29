@@ -3,7 +3,8 @@ package saros.stf.server.rmi.superbot.component.contextmenu.peview.impl;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.List;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.swtbot.swt.finder.SWTBot;
 import org.eclipse.swtbot.swt.finder.waits.Conditions;
 import org.eclipse.swtbot.swt.finder.waits.DefaultCondition;
@@ -25,7 +26,7 @@ import saros.stf.server.rmi.superbot.component.contextmenu.peview.submenu.impl.S
 
 public final class ContextMenusInPEView extends StfRemoteObject implements IContextMenusInPEView {
 
-  private static final Logger log = Logger.getLogger(ContextMenusInPEView.class);
+  private static final Logger log = LogManager.getLogger(ContextMenusInPEView.class);
   private static final ContextMenusInPEView INSTANCE = new ContextMenusInPEView();
 
   private SWTBotTreeItem treeItem;

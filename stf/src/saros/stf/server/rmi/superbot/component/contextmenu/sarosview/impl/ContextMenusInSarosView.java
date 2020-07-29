@@ -1,7 +1,7 @@
 package saros.stf.server.rmi.superbot.component.contextmenu.sarosview.impl;
 
 import java.rmi.RemoteException;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.swtbot.swt.finder.widgets.SWTBotTree;
 import org.eclipse.swtbot.swt.finder.widgets.SWTBotTreeItem;
 import saros.stf.server.StfRemoteObject;

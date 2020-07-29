@@ -1,7 +1,8 @@
 package saros.stf.server.rmi.superbot.component.contextmenu.peview.submenu.impl;
 
 import java.rmi.RemoteException;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.swtbot.swt.finder.SWTBot;
 import org.eclipse.swtbot.swt.finder.exceptions.WidgetNotFoundException;
 import org.eclipse.swtbot.swt.finder.waits.Conditions;
@@ -16,7 +17,7 @@ import saros.stf.server.rmi.superbot.component.contextmenu.peview.submenu.INewC;
 
 public final class NewC extends StfRemoteObject implements INewC {
 
-  private static final Logger log = Logger.getLogger(NewC.class);
+  private static final Logger log = LogManager.getLogger(NewC.class);
 
   private static final NewC INSTANCE = new NewC();
 

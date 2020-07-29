@@ -1,6 +1,7 @@
 package saros.stf;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.ui.IStartup;
 import saros.SarosPluginContext;
 import saros.annotations.Component;
@@ -18,7 +19,7 @@ import saros.util.ThreadUtils;
 @Component(module = "integration")
 public class StartupSarosSTF implements IStartup {
 
-  private static final Logger log = Logger.getLogger(StartupSarosSTF.class);
+  private static final Logger log = LogManager.getLogger(StartupSarosSTF.class);
 
   @Inject private IContainerContext context;
 
