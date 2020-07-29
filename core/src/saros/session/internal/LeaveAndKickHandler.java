@@ -1,6 +1,7 @@
 package saros.session.internal;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jivesoftware.smack.PacketListener;
 import org.jivesoftware.smack.packet.Packet;
 import saros.communication.extensions.KickUserExtension;
@@ -20,7 +21,7 @@ import saros.util.ThreadUtils;
  */
 public class LeaveAndKickHandler implements Startable {
 
-  private static final Logger log = Logger.getLogger(LeaveAndKickHandler.class.getName());
+  private static final Logger log = LogManager.getLogger(LeaveAndKickHandler.class.getName());
 
   private final ISarosSession session;
   private final ISarosSessionManager sessionManager;

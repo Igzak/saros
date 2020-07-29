@@ -6,7 +6,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 import java.util.concurrent.CancellationException;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jivesoftware.smack.packet.Packet;
 import saros.communication.extensions.ResourceNegotiationMissingFilesExtension;
 import saros.communication.extensions.ResourceNegotiationOfferingExtension;
@@ -40,7 +41,7 @@ import saros.synchronize.StartHandle;
  */
 public abstract class AbstractOutgoingResourceNegotiation extends ResourceNegotiation {
 
-  private static final Logger log = Logger.getLogger(AbstractOutgoingResourceNegotiation.class);
+  private static final Logger log = LogManager.getLogger(AbstractOutgoingResourceNegotiation.class);
 
   protected ResourceSharingData resourceSharingData;
 

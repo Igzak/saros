@@ -10,7 +10,8 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.activities.ChangeColorActivity;
 import saros.annotations.Component;
 import saros.editor.colorstorage.ColorIDSet;
@@ -37,7 +38,7 @@ import saros.session.User;
 @Component(module = "core")
 public class ChangeColorManager extends AbstractActivityProducer implements Startable {
 
-  private static final Logger log = Logger.getLogger(ChangeColorManager.class);
+  private static final Logger log = LogManager.getLogger(ChangeColorManager.class);
 
   private final SarosSession session;
   private final ColorIDSetStorage colorIDSetStorage;

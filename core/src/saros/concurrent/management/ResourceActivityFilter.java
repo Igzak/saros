@@ -8,7 +8,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Consumer;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.activities.ChecksumActivity;
 import saros.activities.DeletionAcknowledgmentActivity;
 import saros.activities.EditorActivity;
@@ -27,7 +28,7 @@ import saros.session.User;
 
 /** Class to handle file deletions and filter out resource activities for already deleted files. */
 class ResourceActivityFilter {
-  private static final Logger log = Logger.getLogger(ResourceActivityFilter.class);
+  private static final Logger log = LogManager.getLogger(ResourceActivityFilter.class);
 
   private final ISarosSession sarosSession;
 

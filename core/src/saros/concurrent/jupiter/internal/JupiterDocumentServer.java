@@ -3,7 +3,8 @@ package saros.concurrent.jupiter.internal;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.activities.ChecksumActivity;
 import saros.activities.JupiterActivity;
 import saros.concurrent.jupiter.Operation;
@@ -19,7 +20,7 @@ import saros.session.User;
  */
 public class JupiterDocumentServer {
 
-  private static final Logger log = Logger.getLogger(JupiterDocumentServer.class);
+  private static final Logger log = LogManager.getLogger(JupiterDocumentServer.class);
 
   /** List of proxy clients. */
   private final HashMap<User, Jupiter> proxies = new HashMap<User, Jupiter>();

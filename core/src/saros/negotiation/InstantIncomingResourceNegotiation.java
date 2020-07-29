@@ -6,7 +6,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
 import org.apache.commons.io.input.CountingInputStream;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.exceptions.LocalCancellationException;
 import saros.exceptions.SarosCancellationException;
 import saros.filesystem.IReferencePoint;
@@ -26,7 +27,7 @@ import saros.session.ISarosSessionManager;
 /** Receive shared resources and display them instant using a stream based solution. */
 public class InstantIncomingResourceNegotiation extends AbstractIncomingResourceNegotiation {
 
-  private static final Logger log = Logger.getLogger(InstantIncomingResourceNegotiation.class);
+  private static final Logger log = LogManager.getLogger(InstantIncomingResourceNegotiation.class);
 
   public InstantIncomingResourceNegotiation(
       final JID peer, //

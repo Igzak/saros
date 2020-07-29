@@ -29,7 +29,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jivesoftware.smack.PacketListener;
 import org.jivesoftware.smack.packet.Packet;
 import org.jivesoftware.smack.packet.PacketExtension;
@@ -56,7 +57,7 @@ import saros.util.ThreadUtils;
  */
 public class ActivitySequencer implements Startable {
 
-  private static final Logger log = Logger.getLogger(ActivitySequencer.class.getName());
+  private static final Logger log = LogManager.getLogger(ActivitySequencer.class.getName());
 
   /** join timeout when stopping this component */
   private static final long TIMEOUT = 30000;

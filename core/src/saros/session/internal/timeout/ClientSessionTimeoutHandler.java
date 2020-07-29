@@ -1,7 +1,8 @@
 package saros.session.internal.timeout;
 
 import java.io.IOException;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jivesoftware.smack.PacketListener;
 import org.jivesoftware.smack.packet.Packet;
 import saros.communication.extensions.PingExtension;
@@ -20,7 +21,7 @@ import saros.util.ThreadUtils;
  */
 public final class ClientSessionTimeoutHandler extends SessionTimeoutHandler {
 
-  private static final Logger log = Logger.getLogger(ClientSessionTimeoutHandler.class);
+  private static final Logger log = LogManager.getLogger(ClientSessionTimeoutHandler.class);
 
   private boolean shutdown;
 

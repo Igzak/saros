@@ -17,7 +17,8 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 import java.util.concurrent.atomic.AtomicReference;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.bitlet.weupnp.GatewayDevice;
 import org.bitlet.weupnp.PortMappingEntry;
 import saros.net.upnp.IUPnPAccess;
@@ -30,7 +31,7 @@ import saros.util.NamedThreadFactory;
  */
 public final class UPnPServiceImpl implements IUPnPService, Disposable {
 
-  private static final Logger log = Logger.getLogger(UPnPServiceImpl.class);
+  private static final Logger log = LogManager.getLogger(UPnPServiceImpl.class);
 
   private final Map<GatewayDevice, Map<String, Set<Integer>>> currentMappedPorts = new HashMap<>();
 

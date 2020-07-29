@@ -3,7 +3,8 @@ package saros.net.internal;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * A connection pool with the ability to close all pooled connections when the pool is closed. After
@@ -11,7 +12,7 @@ import org.apache.log4j.Logger;
  */
 final class ConnectionPool {
 
-  private static final Logger log = Logger.getLogger(ConnectionPool.class);
+  private static final Logger log = LogManager.getLogger(ConnectionPool.class);
 
   private boolean isOpen;
 

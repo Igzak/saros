@@ -5,7 +5,8 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jivesoftware.smack.PacketListener;
 import org.jivesoftware.smack.packet.Packet;
 import saros.communication.extensions.PingExtension;
@@ -27,7 +28,7 @@ import saros.util.ThreadUtils;
  */
 public final class ServerSessionTimeoutHandler extends SessionTimeoutHandler {
 
-  private static final Logger log = Logger.getLogger(ClientSessionTimeoutHandler.class);
+  private static final Logger log = LogManager.getLogger(ClientSessionTimeoutHandler.class);
 
   private Thread workerThread;
 

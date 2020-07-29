@@ -5,7 +5,8 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jivesoftware.smack.Chat;
 import org.jivesoftware.smack.ChatManager;
 import org.jivesoftware.smack.ChatManagerListener;
@@ -23,7 +24,7 @@ import saros.net.xmpp.XMPPConnectionService;
 
 public class SingleUserChatService extends AbstractChatService {
 
-  private static final Logger log = Logger.getLogger(SingleUserChatService.class);
+  private static final Logger log = LogManager.getLogger(SingleUserChatService.class);
 
   private IConnectionListener connectionLister =
       new IConnectionListener() {

@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.WeakHashMap;
-import org.apache.log4j.Level;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jivesoftware.smack.Connection;
 import org.jivesoftware.smack.PacketListener;
 import org.jivesoftware.smack.XMPPException;
@@ -28,7 +28,7 @@ import saros.net.xmpp.JID;
  * @author bkahlert
  */
 class MultiUserChatStateManager {
-  private static final Logger log = Logger.getLogger(MultiUserChatStateManager.class);
+  private static final Logger log = LogManager.getLogger(MultiUserChatStateManager.class);
   protected static final Map<MultiUserChat, MultiUserChatStateManager> managers =
       new WeakHashMap<MultiUserChat, MultiUserChatStateManager>();
 
@@ -106,7 +106,7 @@ class MultiUserChatStateManager {
       };
 
   protected MultiUserChatStateManager(Connection connection, MultiUserChat muc) {
-    log.setLevel(Level.TRACE);
+    // log.setLevel(Level.TRACE);
 
     this.connection = connection;
     this.muc = muc;

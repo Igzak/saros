@@ -1,7 +1,8 @@
 package saros.versioning;
 
 import java.util.Objects;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.annotations.Component;
 import saros.communication.InfoManager;
 import saros.context.IContextKeyBindings.SarosVersion;
@@ -21,7 +22,7 @@ public class VersionManager {
 
   public static final String VERSION_KEY = "version";
 
-  private static final Logger log = Logger.getLogger(VersionManager.class);
+  private static final Logger log = LogManager.getLogger(VersionManager.class);
 
   private final Version localVersion;
   private final InfoManager infoManager;

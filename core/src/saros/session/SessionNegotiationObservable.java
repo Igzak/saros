@@ -6,7 +6,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.negotiation.SessionNegotiation;
 import saros.net.xmpp.JID;
 
@@ -14,7 +15,7 @@ import saros.net.xmpp.JID;
 // TODO remove the ID part here, there should only be one invitation per JID
 final class SessionNegotiationObservable {
 
-  private static final Logger log = Logger.getLogger(SessionNegotiationObservable.class);
+  private static final Logger log = LogManager.getLogger(SessionNegotiationObservable.class);
 
   private final Map<JID, List<SessionNegotiation>> negotiations =
       new HashMap<JID, List<SessionNegotiation>>();

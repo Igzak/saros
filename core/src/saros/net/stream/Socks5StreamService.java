@@ -18,7 +18,8 @@ import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 import java.util.regex.Pattern;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jivesoftware.smack.Connection;
 import org.jivesoftware.smack.XMPPException;
 import org.jivesoftware.smack.packet.XMPPError;
@@ -67,7 +68,7 @@ import saros.util.NamedThreadFactory;
  */
 public class Socks5StreamService implements IStreamService, BytestreamListener {
 
-  private static final Logger log = Logger.getLogger(Socks5StreamService.class);
+  private static final Logger log = LogManager.getLogger(Socks5StreamService.class);
 
   private static final Random ID_GENERATOR = new Random();
 

@@ -1,7 +1,8 @@
 package saros.negotiation;
 
 import java.io.IOException;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jivesoftware.smack.packet.PacketExtension;
 import org.jivesoftware.smackx.filetransfer.FileTransfer;
 import saros.communication.extensions.CancelResourceNegotiationExtension;
@@ -28,7 +29,7 @@ import saros.session.ISarosSessionManager;
  */
 public abstract class ResourceNegotiation extends Negotiation {
 
-  private static final Logger log = Logger.getLogger(ResourceNegotiation.class);
+  private static final Logger log = LogManager.getLogger(ResourceNegotiation.class);
 
   /** Prefix part of the id used in the SMACK XMPP file transfer protocol. */
   public static final String TRANSFER_ID_PREFIX = "saros-dpp-pn-server-client/";

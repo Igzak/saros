@@ -23,7 +23,8 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.zip.Deflater;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jivesoftware.smack.Connection;
 import org.jivesoftware.smack.packet.Message;
 import org.jivesoftware.smack.packet.Packet;
@@ -45,7 +46,7 @@ import saros.net.xmpp.XMPPConnectionService;
 @Component(module = "net")
 public class XMPPTransmitter implements ITransmitter, IConnectionListener {
 
-  private static final Logger log = Logger.getLogger(XMPPTransmitter.class);
+  private static final Logger log = LogManager.getLogger(XMPPTransmitter.class);
 
   /** size in bytes that a packet extension must exceed to be compressed */
   private static final int PACKET_EXTENSION_COMPRESS_THRESHOLD =

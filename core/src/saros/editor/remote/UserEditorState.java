@@ -3,7 +3,8 @@ package saros.editor.remote;
 import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.Set;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.activities.EditorActivity;
 import saros.activities.TextSelectionActivity;
 import saros.activities.ViewportActivity;
@@ -19,7 +20,7 @@ import saros.session.IActivityConsumer;
  */
 public class UserEditorState {
 
-  private static final Logger log = Logger.getLogger(UserEditorState.class);
+  private static final Logger log = LogManager.getLogger(UserEditorState.class);
 
   private final LinkedHashMap<IFile, EditorState> openEditors = new LinkedHashMap<>();
 

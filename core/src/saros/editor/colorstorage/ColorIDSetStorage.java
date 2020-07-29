@@ -9,7 +9,8 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.annotations.Component;
 import saros.misc.xstream.XStreamFactory;
 import saros.preferences.IPreferenceStore;
@@ -21,7 +22,7 @@ import saros.preferences.IPreferenceStore;
 @Component(module = "core")
 public final class ColorIDSetStorage {
 
-  private static final Logger log = Logger.getLogger(ColorIDSetStorage.class);
+  private static final Logger log = LogManager.getLogger(ColorIDSetStorage.class);
 
   private static final String PREFERENCE_STORE_KEY = "saros.coloridsets";
 

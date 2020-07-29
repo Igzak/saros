@@ -3,7 +3,8 @@ package saros.net.util;
 import gnu.inet.encoding.Stringprep;
 import gnu.inet.encoding.StringprepException;
 import java.util.Iterator;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jivesoftware.smack.AccountManager;
 import org.jivesoftware.smack.Connection;
 import org.jivesoftware.smack.PacketCollector;
@@ -32,7 +33,7 @@ import saros.net.xmpp.XMPPConnectionService;
 
 /** Utility class for classic XMPP operations */
 public class XMPPUtils {
-  private static final Logger log = Logger.getLogger(XMPPUtils.class);
+  private static final Logger log = LogManager.getLogger(XMPPUtils.class);
 
   private static volatile XMPPConnectionService defaultConnectionService;
 

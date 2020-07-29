@@ -11,7 +11,8 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.activities.ChecksumActivity;
 import saros.activities.ChecksumErrorActivity;
 import saros.activities.FileActivity;
@@ -45,7 +46,7 @@ import saros.util.CoreUtils;
 @Component(module = "consistency")
 public class ConsistencyWatchdogClient extends AbstractActivityProducer implements Startable {
 
-  private static final Logger log = Logger.getLogger(ConsistencyWatchdogClient.class);
+  private static final Logger log = LogManager.getLogger(ConsistencyWatchdogClient.class);
 
   private static final Random RANDOM = new Random();
 

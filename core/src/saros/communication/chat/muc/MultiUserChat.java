@@ -7,7 +7,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jivesoftware.smack.Chat;
 import org.jivesoftware.smack.Connection;
 import org.jivesoftware.smack.PacketListener;
@@ -30,7 +31,7 @@ import saros.net.xmpp.JID;
  * @author bkahlert
  */
 public class MultiUserChat extends AbstractChat {
-  private final Logger log = Logger.getLogger(MultiUserChat.class);
+  private final Logger log = LogManager.getLogger(MultiUserChat.class);
 
   /** {@link Connection} this {@link MultiUserChat} uses */
   private Connection connection;

@@ -8,7 +8,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.filesystem.IReferencePoint;
 import saros.filesystem.IResource;
 import saros.session.User;
@@ -24,7 +25,7 @@ import saros.session.User;
  */
 class SharedReferencePointMapper {
 
-  private static final Logger log = Logger.getLogger(SharedReferencePointMapper.class);
+  private static final Logger log = LogManager.getLogger(SharedReferencePointMapper.class);
 
   /** Mapping from reference point IDs to currently registered shared reference points. */
   private final Map<String, IReferencePoint> idToReferencePointMapping =

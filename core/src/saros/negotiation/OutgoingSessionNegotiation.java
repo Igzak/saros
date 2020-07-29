@@ -3,7 +3,8 @@ package saros.negotiation;
 import java.io.IOException;
 import java.util.Map;
 import java.util.Random;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jivesoftware.smack.packet.Packet;
 import saros.communication.extensions.ConnectionEstablishedExtension;
 import saros.communication.extensions.InvitationAcceptedExtension;
@@ -37,7 +38,7 @@ import saros.versioning.VersionManager;
  */
 public final class OutgoingSessionNegotiation extends SessionNegotiation {
 
-  private static final Logger log = Logger.getLogger(OutgoingSessionNegotiation.class);
+  private static final Logger log = LogManager.getLogger(OutgoingSessionNegotiation.class);
 
   private static final boolean IGNORE_VERSION_COMPATIBILITY =
       Boolean.getBoolean("saros.negotiation.session.IGNORE_VERSION_COMPATIBILITY");

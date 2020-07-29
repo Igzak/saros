@@ -2,7 +2,8 @@ package saros.net.xmpp.subscription;
 
 import java.text.MessageFormat;
 import java.util.concurrent.CopyOnWriteArrayList;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jivesoftware.smack.Connection;
 import org.jivesoftware.smack.PacketListener;
 import org.jivesoftware.smack.RosterEntry;
@@ -27,7 +28,7 @@ import saros.net.xmpp.XMPPConnectionService;
  */
 @Component(module = "net")
 public class SubscriptionHandler {
-  private static final Logger log = Logger.getLogger(SubscriptionHandler.class);
+  private static final Logger log = LogManager.getLogger(SubscriptionHandler.class);
 
   private Connection connection = null;
 

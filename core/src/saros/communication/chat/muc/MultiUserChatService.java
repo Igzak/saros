@@ -22,7 +22,8 @@ package saros.communication.chat.muc;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.concurrent.atomic.AtomicReference;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jivesoftware.smack.Connection;
 import org.jivesoftware.smack.XMPPException;
 import org.jivesoftware.smackx.ChatState;
@@ -42,7 +43,7 @@ import saros.net.xmpp.XMPPConnectionService;
  */
 @Component(module = "communication")
 public class MultiUserChatService extends AbstractChatService {
-  private static final Logger log = Logger.getLogger(MultiUserChatService.class);
+  private static final Logger log = LogManager.getLogger(MultiUserChatService.class);
 
   private Set<MultiUserChat> chats = new HashSet<MultiUserChat>();
 

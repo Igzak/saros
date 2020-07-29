@@ -3,7 +3,8 @@ package saros.communication.connection;
 import java.text.MessageFormat;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jivesoftware.smack.Connection;
 import org.jivesoftware.smack.ConnectionConfiguration;
 import org.jivesoftware.smack.XMPPException;
@@ -28,7 +29,7 @@ import saros.ui.CoreMessages;
 // TODO better name
 public class ConnectionHandler {
 
-  private static final Logger log = Logger.getLogger(ConnectionHandler.class);
+  private static final Logger log = LogManager.getLogger(ConnectionHandler.class);
 
   private final XMPPConnectionService connectionService;
 

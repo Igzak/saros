@@ -7,7 +7,8 @@ import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.CountDownLatch;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.bitlet.weupnp.GatewayDevice;
 import org.jivesoftware.smack.Connection;
 import org.jivesoftware.smack.ConnectionConfiguration;
@@ -41,7 +42,7 @@ public class XMPPConnectionService {
   public static final String XMPP_CLIENT_IDENTIFIER = "https://saros-project.org";
   private static final String CAPS_HASH_ALGORITHM = "sha-1";
 
-  private static final Logger log = Logger.getLogger(XMPPConnectionService.class);
+  private static final Logger log = LogManager.getLogger(XMPPConnectionService.class);
 
   // DO NOT CHANGE THE CONTENT OF THIS STRING, NEVER NEVER NEVER !!!
   private static final String PORT_MAPPING_DESCRIPTION = "Saros Socks5 TCP";

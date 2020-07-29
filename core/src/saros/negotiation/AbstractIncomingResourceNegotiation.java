@@ -8,7 +8,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.Future;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jivesoftware.smack.packet.Packet;
 import saros.communication.extensions.ResourceNegotiationMissingFilesExtension;
 import saros.communication.extensions.StartActivityQueuingRequest;
@@ -45,7 +46,7 @@ import saros.session.SessionEndReason;
  */
 public abstract class AbstractIncomingResourceNegotiation extends ResourceNegotiation {
 
-  private static final Logger log = Logger.getLogger(AbstractIncomingResourceNegotiation.class);
+  private static final Logger log = LogManager.getLogger(AbstractIncomingResourceNegotiation.class);
 
   private static int MONITOR_WORK_SCALE = 1000;
 

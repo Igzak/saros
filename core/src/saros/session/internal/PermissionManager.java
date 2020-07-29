@@ -1,7 +1,8 @@
 package saros.session.internal;
 
 import java.util.concurrent.CancellationException;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.activities.PermissionActivity;
 import saros.annotations.Component;
 import saros.repackaged.picocontainer.Startable;
@@ -23,7 +24,7 @@ import saros.util.ThreadUtils;
  */
 @Component(module = "core")
 public class PermissionManager extends AbstractActivityProducer implements Startable {
-  private static final Logger log = Logger.getLogger(PermissionManager.class);
+  private static final Logger log = LogManager.getLogger(PermissionManager.class);
 
   private final IActivityConsumer consumer =
       new AbstractActivityConsumer() {

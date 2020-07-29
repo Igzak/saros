@@ -12,7 +12,8 @@ import java.net.ProtocolException;
 import java.net.SocketException;
 import java.util.HashMap;
 import java.util.Map;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.net.stream.ByteStream;
 import saros.net.stream.StreamMode;
 import saros.net.xmpp.JID;
@@ -32,7 +33,7 @@ import saros.net.xmpp.JID;
  */
 public class BinaryChannelConnection implements IByteStreamConnection {
 
-  private static final Logger log = Logger.getLogger(BinaryChannelConnection.class);
+  private static final Logger log = LogManager.getLogger(BinaryChannelConnection.class);
 
   private static final long TERMINATE_TIMEOUT = 10000L;
 

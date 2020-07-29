@@ -1,6 +1,7 @@
 package saros.concurrent.jupiter.test.util;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.activities.JupiterActivity;
 import saros.concurrent.jupiter.Algorithm;
 import saros.concurrent.jupiter.Operation;
@@ -15,7 +16,7 @@ import saros.session.User;
  */
 public class ProxySynchronizedQueue {
 
-  private static final Logger log = Logger.getLogger(ProxySynchronizedQueue.class);
+  private static final Logger log = LogManager.getLogger(ProxySynchronizedQueue.class);
 
   private Algorithm algorithm;
   private NetworkSimulator connection;

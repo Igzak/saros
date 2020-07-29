@@ -5,7 +5,8 @@ import java.util.Collections;
 import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.filesystem.FileSystem;
 import saros.filesystem.IFile;
 import saros.filesystem.IFolder;
@@ -27,7 +28,7 @@ import saros.negotiation.FileList.MetaData;
  */
 public class FileListFactory {
 
-  private static final Logger log = Logger.getLogger(FileListFactory.class);
+  private static final Logger log = LogManager.getLogger(FileListFactory.class);
 
   private FileListFactory() {
     // NOP

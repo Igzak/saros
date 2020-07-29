@@ -2,7 +2,8 @@ package saros.preferences;
 
 import java.util.Properties;
 import java.util.concurrent.CopyOnWriteArrayList;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Default implementation of the {@link IPreferenceStore} interface.
@@ -18,7 +19,7 @@ import org.apache.log4j.Logger;
  */
 public class PreferenceStore implements IPreferenceStore {
 
-  private static final Logger log = Logger.getLogger(PreferenceStore.class);
+  private static final Logger log = LogManager.getLogger(PreferenceStore.class);
 
   /** The default-default value for boolean preferences (<code>false</code>). */
   public static final boolean DEFAULT_BOOLEAN = false;

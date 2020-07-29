@@ -6,7 +6,8 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jivesoftware.smack.PacketListener;
 import org.jivesoftware.smack.packet.Packet;
 import org.jivesoftware.smack.packet.PacketExtension;
@@ -33,7 +34,7 @@ import saros.session.User;
 @Component(module = "core")
 public class UserInformationHandler implements Startable {
 
-  private static final Logger log = Logger.getLogger(UserInformationHandler.class.getName());
+  private static final Logger log = LogManager.getLogger(UserInformationHandler.class.getName());
 
   private static final long USER_LIST_SYNCHRONIZE_TIMEOUT = 10000L;
 

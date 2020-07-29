@@ -1,12 +1,13 @@
 package saros.util;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class ThreadUtils {
 
   static final String THREAD_PREFIX = "saros-";
 
-  private static final Logger defaultLog = Logger.getLogger(ThreadUtils.class);
+  private static final Logger defaultLog = LogManager.getLogger(ThreadUtils.class);
 
   private ThreadUtils() {
     // NOP do not allow object creation

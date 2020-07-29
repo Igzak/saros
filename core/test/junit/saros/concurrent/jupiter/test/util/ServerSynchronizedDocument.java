@@ -1,7 +1,8 @@
 package saros.concurrent.jupiter.test.util;
 
 import java.util.HashMap;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.activities.JupiterActivity;
 import saros.concurrent.jupiter.Algorithm;
 import saros.concurrent.jupiter.Operation;
@@ -11,7 +12,7 @@ import saros.session.User;
 public class ServerSynchronizedDocument
     implements JupiterServer, NetworkEventHandler, DocumentTestChecker {
 
-  private static Logger log = Logger.getLogger(ServerSynchronizedDocument.class);
+  private static Logger log = LogManager.getLogger(ServerSynchronizedDocument.class);
 
   private Document doc;
   /* sync algorithm with ack-operation list. */

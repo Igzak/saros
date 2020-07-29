@@ -1,7 +1,8 @@
 package saros.net.stream;
 
 import java.io.IOException;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jivesoftware.smack.Connection;
 import org.jivesoftware.smack.XMPPException;
 import org.jivesoftware.smackx.bytestreams.BytestreamListener;
@@ -21,7 +22,7 @@ import saros.net.xmpp.JID;
  */
 public class IBBStreamService implements IStreamService, BytestreamListener {
 
-  private static final Logger log = Logger.getLogger(IBBStreamService.class);
+  private static final Logger log = LogManager.getLogger(IBBStreamService.class);
 
   private volatile InBandBytestreamManager manager;
   private volatile IByteStreamConnectionListener connectionListener;

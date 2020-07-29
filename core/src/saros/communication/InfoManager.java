@@ -6,7 +6,8 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jivesoftware.smack.PacketListener;
 import org.jivesoftware.smack.filter.AndFilter;
 import org.jivesoftware.smack.packet.IQ;
@@ -28,7 +29,7 @@ import saros.net.xmpp.contact.XMPPContactsService;
  * String)}.
  */
 public class InfoManager {
-  private static final Logger log = Logger.getLogger(InfoManager.class);
+  private static final Logger log = LogManager.getLogger(InfoManager.class);
 
   private final ITransmitter transmitter;
   private final XMPPContactsService contactsService;

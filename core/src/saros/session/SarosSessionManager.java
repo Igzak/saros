@@ -28,7 +28,8 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.annotations.Component;
 import saros.communication.connection.ConnectionHandler;
 import saros.communication.connection.IConnectionStateListener;
@@ -80,7 +81,7 @@ public class SarosSessionManager implements ISarosSessionManager {
    *
    * <p>For more information about the Invitation Process see the "Invitation Process"-Tour.
    */
-  private static final Logger log = Logger.getLogger(SarosSessionManager.class.getName());
+  private static final Logger log = LogManager.getLogger(SarosSessionManager.class.getName());
 
   private static final Random SESSION_ID_GENERATOR = new Random();
 

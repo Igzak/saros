@@ -4,7 +4,8 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.exceptions.LocalCancellationException;
 import saros.filesystem.IFile;
 import saros.monitoring.IProgressMonitor;
@@ -14,7 +15,7 @@ import saros.negotiation.ResourceSharingData;
 /** Implements Stream creation in {@link AbstractStreamProtocol} format. */
 public class OutgoingStreamProtocol extends AbstractStreamProtocol {
 
-  private static final Logger log = Logger.getLogger(OutgoingStreamProtocol.class);
+  private static final Logger log = LogManager.getLogger(OutgoingStreamProtocol.class);
 
   private static final int BUFFER_SIZE = 8192;
   /** used for copy operations between streams * */

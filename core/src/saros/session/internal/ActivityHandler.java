@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.LinkedBlockingQueue;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.activities.ActivityOptimizer;
 import saros.activities.ChecksumActivity;
 import saros.activities.IActivity;
@@ -33,7 +34,7 @@ import saros.util.ThreadUtils;
  */
 public final class ActivityHandler implements Startable {
 
-  private static final Logger log = Logger.getLogger(ActivityHandler.class);
+  private static final Logger log = LogManager.getLogger(ActivityHandler.class);
 
   private static final List<IActivity> POISON_PILL = new ArrayList<>();
 

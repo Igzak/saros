@@ -2,7 +2,8 @@ package saros.negotiation;
 
 import java.io.IOException;
 import java.util.Map;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jivesoftware.smack.packet.Packet;
 import saros.communication.extensions.ConnectionEstablishedExtension;
 import saros.communication.extensions.InvitationAcceptedExtension;
@@ -31,7 +32,7 @@ import saros.session.SessionEndReason;
  */
 public class IncomingSessionNegotiation extends SessionNegotiation {
 
-  private static Logger log = Logger.getLogger(IncomingSessionNegotiation.class);
+  private static Logger log = LogManager.getLogger(IncomingSessionNegotiation.class);
 
   private final String remoteVersion;
 

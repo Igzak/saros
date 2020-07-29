@@ -11,7 +11,8 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jivesoftware.smack.Connection;
 import saros.annotations.Component;
 import saros.context.IContextKeyBindings.IBBStreamService;
@@ -36,7 +37,7 @@ import saros.repackaged.picocontainer.annotations.Nullable;
 @Component(module = "net")
 public class DataTransferManager implements IConnectionListener, IConnectionManager {
 
-  private static final Logger log = Logger.getLogger(DataTransferManager.class);
+  private static final Logger log = LogManager.getLogger(DataTransferManager.class);
 
   private static final String DEFAULT_CONNECTION_ID = "default";
 

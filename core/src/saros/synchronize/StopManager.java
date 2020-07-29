@@ -14,7 +14,8 @@ import java.util.Set;
 import java.util.concurrent.CancellationException;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.atomic.AtomicBoolean;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.activities.StopActivity;
 import saros.activities.StopActivity.State;
 import saros.activities.StopActivity.Type;
@@ -46,7 +47,7 @@ import saros.util.ThreadUtils;
 @Component(module = "core")
 public final class StopManager extends AbstractActivityProducer implements Startable {
 
-  private static final Logger log = Logger.getLogger(StopManager.class);
+  private static final Logger log = LogManager.getLogger(StopManager.class);
 
   private static final Random RANDOM = new Random();
 

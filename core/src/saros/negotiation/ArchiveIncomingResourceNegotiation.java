@@ -7,7 +7,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ExecutionException;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.exceptions.LocalCancellationException;
 import saros.exceptions.SarosCancellationException;
 import saros.filesystem.IReferencePoint;
@@ -33,7 +34,7 @@ import saros.util.CoreUtils;
  */
 public class ArchiveIncomingResourceNegotiation extends AbstractIncomingResourceNegotiation {
 
-  private static final Logger log = Logger.getLogger(ArchiveIncomingResourceNegotiation.class);
+  private static final Logger log = LogManager.getLogger(ArchiveIncomingResourceNegotiation.class);
 
   public ArchiveIncomingResourceNegotiation(
       final JID peer, //

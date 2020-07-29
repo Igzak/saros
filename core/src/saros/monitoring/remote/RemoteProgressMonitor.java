@@ -1,7 +1,8 @@
 package saros.monitoring.remote;
 
 import java.util.Collection;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.activities.ProgressActivity;
 import saros.activities.ProgressActivity.ProgressAction;
 import saros.monitoring.IProgressMonitor;
@@ -16,7 +17,7 @@ import saros.util.StackTrace;
  */
 class RemoteProgressMonitor implements IProgressMonitor {
 
-  private static final Logger log = Logger.getLogger(RemoteProgressMonitor.class);
+  private static final Logger log = LogManager.getLogger(RemoteProgressMonitor.class);
 
   private final RemoteProgressManager rpm;
   private final String id;

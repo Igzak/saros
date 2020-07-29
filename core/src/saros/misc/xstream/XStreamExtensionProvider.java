@@ -31,7 +31,8 @@ import java.io.StringWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jivesoftware.smack.filter.PacketExtensionFilter;
 import org.jivesoftware.smack.filter.PacketFilter;
 import org.jivesoftware.smack.packet.IQ;
@@ -49,7 +50,7 @@ import org.xmlpull.v1.XmlPullParser;
  */
 public class XStreamExtensionProvider<T> implements PacketExtensionProvider, IQProvider {
 
-  private static final Logger log = Logger.getLogger(XStreamExtensionProvider.class);
+  private static final Logger log = LogManager.getLogger(XStreamExtensionProvider.class);
 
   private static volatile ClassLoader currentClassloader;
 

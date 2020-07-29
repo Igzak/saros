@@ -2,7 +2,8 @@ package saros.session;
 
 import java.util.Collections;
 import java.util.Map;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.negotiation.TransferType;
 import saros.negotiation.hooks.ISessionNegotiationHook;
 import saros.negotiation.hooks.SessionNegotiationHookManager;
@@ -27,7 +28,7 @@ public class ResourceNegotiationTypeHook implements ISessionNegotiationHook {
   private static final String TYPE_ARCHIVE = TransferType.ARCHIVE.name();
   private static final String TYPE_INSTANT = TransferType.INSTANT.name();
 
-  private static final Logger log = Logger.getLogger(ResourceNegotiationTypeHook.class);
+  private static final Logger log = LogManager.getLogger(ResourceNegotiationTypeHook.class);
 
   private Preferences localPref;
 

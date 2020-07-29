@@ -1,7 +1,8 @@
 package saros.synchronize;
 
 import java.util.concurrent.atomic.AtomicBoolean;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.session.User;
 import saros.util.StackTrace;
 
@@ -11,7 +12,7 @@ import saros.util.StackTrace;
  */
 public class StartHandle {
 
-  private static final Logger log = Logger.getLogger(StartHandle.class);
+  private static final Logger log = LogManager.getLogger(StartHandle.class);
 
   protected StopManager stopManager;
 

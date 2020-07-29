@@ -29,7 +29,8 @@ import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 import org.apache.commons.io.IOUtils;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.annotations.Component;
 import saros.misc.xstream.XStreamFactory;
 import saros.net.xmpp.JID;
@@ -48,7 +49,7 @@ import saros.net.xmpp.JID;
  */
 @Component(module = "account")
 public final class XMPPAccountStore {
-  private static final Logger log = Logger.getLogger(XMPPAccountStore.class);
+  private static final Logger log = LogManager.getLogger(XMPPAccountStore.class);
 
   private static final long MAX_ACCOUNT_DATA_SIZE = 10 * 1024 * 1024;
 

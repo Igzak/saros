@@ -6,7 +6,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.filesystem.IFile;
 
 /**
@@ -27,7 +28,7 @@ import saros.filesystem.IFile;
 // 2^128)
 public final class FileSystemChecksumCache implements IChecksumCache {
 
-  private static final Logger log = Logger.getLogger(FileSystemChecksumCache.class);
+  private static final Logger log = LogManager.getLogger(FileSystemChecksumCache.class);
 
   private static final int SEED = 0xDEADBEEF;
 

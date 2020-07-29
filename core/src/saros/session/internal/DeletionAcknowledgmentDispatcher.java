@@ -1,6 +1,7 @@
 package saros.session.internal;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.activities.DeletionAcknowledgmentActivity;
 import saros.activities.FileActivity;
 import saros.activities.FileActivity.Type;
@@ -23,7 +24,7 @@ import saros.session.User;
 public class DeletionAcknowledgmentDispatcher extends AbstractActivityProducer
     implements Startable {
 
-  private static final Logger log = Logger.getLogger(DeletionAcknowledgmentDispatcher.class);
+  private static final Logger log = LogManager.getLogger(DeletionAcknowledgmentDispatcher.class);
 
   private final ISarosSession sarosSession;
 

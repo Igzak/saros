@@ -4,7 +4,8 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
 import java.util.concurrent.CancellationException;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.activities.ChecksumActivity;
 import saros.activities.ChecksumErrorActivity;
 import saros.activities.FileActivity.Purpose;
@@ -33,7 +34,7 @@ import saros.util.ThreadUtils;
 public final class ConsistencyWatchdogHandler extends AbstractActivityProducer
     implements Startable {
 
-  private static final Logger log = Logger.getLogger(ConsistencyWatchdogHandler.class);
+  private static final Logger log = LogManager.getLogger(ConsistencyWatchdogHandler.class);
 
   private final IEditorManager editorManager;
 

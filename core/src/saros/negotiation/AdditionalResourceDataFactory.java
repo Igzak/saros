@@ -5,7 +5,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CopyOnWriteArrayList;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.filesystem.IReferencePoint;
 
 /**
@@ -25,7 +26,7 @@ import saros.filesystem.IReferencePoint;
  */
 // TODO remove as no longer used?
 public class AdditionalResourceDataFactory {
-  private static final Logger log = Logger.getLogger(AdditionalResourceDataFactory.class);
+  private static final Logger log = LogManager.getLogger(AdditionalResourceDataFactory.class);
 
   /**
    * The held list of additional resource data providers used to build the additional resource data.

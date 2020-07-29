@@ -10,11 +10,12 @@ import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.SourceDataLine;
 import javax.sound.sampled.UnsupportedAudioFileException;
 import org.apache.commons.io.IOUtils;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class SoundPlayer {
 
-  private static final Logger log = Logger.getLogger(SoundPlayer.class);
+  private static final Logger log = LogManager.getLogger(SoundPlayer.class);
 
   // 16 Bit, 44.1 kHz, 2 seconds
   private static final int BUFFER_SIZE = 2 * 44100 * 2;

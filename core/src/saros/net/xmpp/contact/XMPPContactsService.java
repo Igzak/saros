@@ -11,7 +11,8 @@ import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.function.BiPredicate;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jivesoftware.smack.Connection;
 import org.jivesoftware.smack.Roster;
 import org.jivesoftware.smack.RosterEntry;
@@ -54,7 +55,7 @@ import saros.util.NamedThreadFactory;
  * in most cases, especially in the normal add / remove scenarios which Saros supports.
  */
 public class XMPPContactsService implements Disposable {
-  private static final Logger log = Logger.getLogger(XMPPContactsService.class);
+  private static final Logger log = LogManager.getLogger(XMPPContactsService.class);
 
   private final List<IContactsUpdate> updateListeners = new CopyOnWriteArrayList<>();
 

@@ -1,7 +1,8 @@
 package saros.session;
 
 import java.util.List;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jivesoftware.smack.PacketListener;
 import org.jivesoftware.smack.packet.Packet;
 import org.jivesoftware.smack.packet.PacketExtension;
@@ -26,7 +27,7 @@ import saros.net.xmpp.JID;
  */
 final class NegotiationPacketListener {
 
-  private static final Logger log = Logger.getLogger(NegotiationPacketListener.class);
+  private static final Logger log = LogManager.getLogger(NegotiationPacketListener.class);
 
   private final ITransmitter transmitter;
   private final IReceiver receiver;

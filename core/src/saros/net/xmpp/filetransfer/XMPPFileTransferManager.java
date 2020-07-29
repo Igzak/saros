@@ -10,7 +10,8 @@ import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.function.Consumer;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jivesoftware.smack.XMPPException;
 import org.jivesoftware.smackx.filetransfer.FileTransferListener;
 import org.jivesoftware.smackx.filetransfer.FileTransferManager;
@@ -43,7 +44,7 @@ import saros.net.xmpp.contact.XMPPContactsService;
 public class XMPPFileTransferManager {
   private static final int GLOBAL_SMACK_RESPONSE_TIMEOUT = (int) TimeUnit.MINUTES.toMillis(5);
 
-  private static final Logger log = Logger.getLogger(FileTransferManager.class);
+  private static final Logger log = LogManager.getLogger(FileTransferManager.class);
 
   /** Mapping identifiers of expected transfers with consuming CompletableFuture. */
   private final ConcurrentMap<String, CompletableFuture<XMPPFileTransferRequest>>

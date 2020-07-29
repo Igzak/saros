@@ -7,7 +7,8 @@ import java.util.Enumeration;
 import java.util.Map;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.exceptions.OperationCanceledException;
 import saros.filesystem.FileSystem;
 import saros.filesystem.IFile;
@@ -20,7 +21,7 @@ import saros.session.ISarosSession;
 
 public class DecompressArchiveTask implements IWorkspaceRunnable {
 
-  private static final Logger log = Logger.getLogger(DecompressArchiveTask.class);
+  private static final Logger log = LogManager.getLogger(DecompressArchiveTask.class);
 
   private final File file;
   private final IProgressMonitor monitor;

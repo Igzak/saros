@@ -3,7 +3,8 @@ package saros.communication.chat.single;
 import java.util.Collections;
 import java.util.Date;
 import java.util.Set;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jivesoftware.smack.Chat;
 import org.jivesoftware.smack.MessageListener;
 import org.jivesoftware.smack.XMPPException;
@@ -19,7 +20,7 @@ import saros.net.xmpp.JID;
 
 /** This object represents a chat with a single user. */
 public class SingleUserChat extends AbstractChat {
-  private static final Logger log = Logger.getLogger(SingleUserChat.class);
+  private static final Logger log = LogManager.getLogger(SingleUserChat.class);
 
   private final ChatStateListener chatStateListener =
       new ChatStateListener() {

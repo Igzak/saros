@@ -13,7 +13,8 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.LinkedBlockingDeque;
 import org.apache.commons.io.output.CountingOutputStream;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.editor.IEditorManager;
 import saros.editor.ISharedEditorListener;
 import saros.editor.remote.UserEditorStateManager;
@@ -39,7 +40,7 @@ import saros.synchronize.StartHandle;
 /** Share resources to display them instant on client side using a stream based solution. */
 public class InstantOutgoingResourceNegotiation extends AbstractOutgoingResourceNegotiation {
 
-  private static final Logger log = Logger.getLogger(InstantOutgoingResourceNegotiation.class);
+  private static final Logger log = LogManager.getLogger(InstantOutgoingResourceNegotiation.class);
 
   /** used as LIFO queue * */
   private final Deque<IFile> openedFiles = new LinkedBlockingDeque<>();

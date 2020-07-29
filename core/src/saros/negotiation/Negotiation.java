@@ -3,7 +3,8 @@ package saros.negotiation;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jivesoftware.smack.packet.Packet;
 import saros.exceptions.LocalCancellationException;
 import saros.exceptions.RemoteCancellationException;
@@ -33,7 +34,7 @@ abstract class Negotiation {
     REMOTE_ERROR
   }
 
-  private static final Logger log = Logger.getLogger(Negotiation.class);
+  private static final Logger log = LogManager.getLogger(Negotiation.class);
 
   private final String id;
 

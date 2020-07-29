@@ -2,7 +2,8 @@ package saros.net;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.annotations.Component;
 import saros.repackaged.picocontainer.Disposable;
 import saros.util.NamedThreadFactory;
@@ -12,7 +13,7 @@ import saros.util.ThreadUtils;
 @Component(module = "core")
 public class DispatchThreadContext implements Disposable {
 
-  private static final Logger log = Logger.getLogger(DispatchThreadContext.class);
+  private static final Logger log = LogManager.getLogger(DispatchThreadContext.class);
 
   protected ExecutorService dispatch =
       Executors.newSingleThreadExecutor(new NamedThreadFactory("DispatchContext", false));

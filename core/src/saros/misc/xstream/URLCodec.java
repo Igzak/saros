@@ -3,7 +3,8 @@ package saros.misc.xstream;
 import java.nio.charset.Charset;
 import org.apache.commons.codec.DecoderException;
 import org.apache.commons.codec.EncoderException;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Simple wrapper around {@link org.apache.commons.codec.net.URLCodec} using UTF-8 as default
@@ -11,7 +12,7 @@ import org.apache.log4j.Logger;
  */
 class URLCodec {
 
-  private static final Logger log = Logger.getLogger(URLCodec.class);
+  private static final Logger log = LogManager.getLogger(URLCodec.class);
 
   private static final Charset CHARSET = Charset.forName("UTF-8");
 

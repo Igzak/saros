@@ -3,7 +3,8 @@ package saros.concurrent.management;
 import java.util.Map.Entry;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.activities.JupiterActivity;
 import saros.concurrent.jupiter.Algorithm;
 import saros.concurrent.jupiter.internal.Jupiter;
@@ -31,7 +32,7 @@ import saros.util.NamedThreadFactory;
  */
 public class HeartbeatDispatcher extends AbstractActivityProducer implements Startable {
 
-  private static final Logger log = Logger.getLogger(HeartbeatDispatcher.class);
+  private static final Logger log = LogManager.getLogger(HeartbeatDispatcher.class);
 
   private final ISarosSession session;
   private final UISynchronizer uiSynchronizer;

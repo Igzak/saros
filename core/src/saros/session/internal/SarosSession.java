@@ -29,7 +29,8 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.CopyOnWriteArraySet;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.activities.IActivity;
 import saros.activities.IResourceActivity;
 import saros.activities.NOPActivity;
@@ -67,7 +68,7 @@ import saros.util.ThreadUtils;
  */
 public final class SarosSession implements ISarosSession {
 
-  private static final Logger log = Logger.getLogger(SarosSession.class);
+  private static final Logger log = LogManager.getLogger(SarosSession.class);
 
   /* Application Context Dependencies Start*/
 

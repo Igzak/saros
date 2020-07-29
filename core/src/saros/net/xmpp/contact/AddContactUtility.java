@@ -2,7 +2,8 @@ package saros.net.xmpp.contact;
 
 import java.util.Objects;
 import java.util.function.BiPredicate;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jivesoftware.smack.Connection;
 import org.jivesoftware.smack.XMPPException;
 import saros.SarosConstants;
@@ -27,7 +28,7 @@ import saros.net.xmpp.XMPPConnectionService;
  * but probably update smack first.
  */
 class AddContactUtility {
-  private static final Logger log = Logger.getLogger(AddContactUtility.class);
+  private static final Logger log = LogManager.getLogger(AddContactUtility.class);
 
   private static final class DialogContent {
     private final String dialogTitle;

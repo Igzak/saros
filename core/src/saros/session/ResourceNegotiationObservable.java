@@ -6,7 +6,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.negotiation.ResourceNegotiation;
 import saros.net.xmpp.JID;
 
@@ -16,7 +17,7 @@ import saros.net.xmpp.JID;
  */
 final class ResourceNegotiationObservable {
 
-  private static final Logger log = Logger.getLogger(ResourceNegotiationObservable.class);
+  private static final Logger log = LogManager.getLogger(ResourceNegotiationObservable.class);
 
   private final Map<JID, List<ResourceNegotiation>> negotiations =
       new HashMap<JID, List<ResourceNegotiation>>();

@@ -19,7 +19,8 @@
  */
 package saros.negotiation;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jivesoftware.smack.packet.PacketExtension;
 import saros.communication.extensions.CancelInviteExtension;
 import saros.exceptions.LocalCancellationException;
@@ -38,7 +39,7 @@ import saros.session.ISarosSessionManager;
  */
 public abstract class SessionNegotiation extends Negotiation {
 
-  private static final Logger log = Logger.getLogger(SessionNegotiation.class);
+  private static final Logger log = LogManager.getLogger(SessionNegotiation.class);
 
   /** Timeout for all packet exchanges during the session negotiation */
   protected static final long PACKET_TIMEOUT =

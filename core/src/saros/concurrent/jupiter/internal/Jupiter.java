@@ -25,7 +25,8 @@ import java.util.Iterator;
 import java.util.List;
 import javax.swing.undo.CannotRedoException;
 import javax.swing.undo.CannotUndoException;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.activities.ChecksumActivity;
 import saros.activities.JupiterActivity;
 import saros.concurrent.jupiter.Algorithm;
@@ -43,7 +44,7 @@ import saros.session.User;
 /** This class implements the client-side core of the Jupiter control algorithm. */
 public class Jupiter implements Algorithm {
 
-  private static final Logger log = Logger.getLogger(Jupiter.class);
+  private static final Logger log = LogManager.getLogger(Jupiter.class);
 
   /** The inclusion transformation function used to transform operations. */
   protected InclusionTransformation inclusion;

@@ -2,7 +2,8 @@ package saros.misc.xstream;
 
 import com.thoughtworks.xstream.converters.ConverterMatcher;
 import com.thoughtworks.xstream.converters.SingleValueConverter;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * A {@link ReplaceableSingleValueConverter} is an XStream {@link SingleValueConverter} that can be
@@ -14,7 +15,7 @@ import org.apache.log4j.Logger;
 class ReplaceableSingleValueConverter extends Replaceable<SingleValueConverter>
     implements SingleValueConverter {
 
-  private static final Logger log = Logger.getLogger(ReplaceableSingleValueConverter.class);
+  private static final Logger log = LogManager.getLogger(ReplaceableSingleValueConverter.class);
 
   /**
    * Wraps any {@link SingleValueConverter} so this object can be registered to XStream (and stay

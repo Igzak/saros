@@ -2,7 +2,8 @@ package saros.net;
 
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.TimeUnit;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jivesoftware.smack.PacketListener;
 import org.jivesoftware.smack.filter.PacketFilter;
 import org.jivesoftware.smack.packet.Packet;
@@ -18,7 +19,7 @@ public class PacketCollector implements PacketListener {
     public void cancelPacketCollector(PacketCollector collector);
   }
 
-  private static final Logger log = Logger.getLogger(PacketCollector.class);
+  private static final Logger log = LogManager.getLogger(PacketCollector.class);
   private boolean hasReveived = false;
 
   /**

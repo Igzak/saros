@@ -2,7 +2,8 @@ package saros.concurrent.jupiter.test.util;
 
 import java.util.List;
 import org.apache.commons.lang3.tuple.Pair;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.activities.TextEditActivity;
 import saros.concurrent.jupiter.Operation;
 import saros.concurrent.jupiter.internal.text.ITextOperation;
@@ -32,7 +33,7 @@ public class Document {
     public String getUser();
   }
 
-  private static final Logger log = Logger.getLogger(Document.class.getName());
+  private static final Logger log = LogManager.getLogger(Document.class.getName());
 
   /** document state. */
   private final StringBuffer doc;

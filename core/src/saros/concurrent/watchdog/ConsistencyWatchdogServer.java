@@ -9,7 +9,8 @@ import java.util.Set;
 import java.util.concurrent.Future;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.activities.ChecksumActivity;
 import saros.activities.TextEditActivity;
 import saros.annotations.Component;
@@ -38,7 +39,7 @@ import saros.util.ThreadUtils;
 public class ConsistencyWatchdogServer extends AbstractActivityProducer
     implements Startable, Blockable {
 
-  private static final Logger log = Logger.getLogger(ConsistencyWatchdogServer.class);
+  private static final Logger log = LogManager.getLogger(ConsistencyWatchdogServer.class);
 
   private static final long CHECKSUM_CALCULATION_INTERVAL = 10000;
   private static final long TERMINATION_TIMEOUT = 10000;

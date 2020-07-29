@@ -4,7 +4,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.CopyOnWriteArrayList;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.activities.EditorActivity;
 import saros.activities.IActivity;
 import saros.activities.StartFollowingActivity;
@@ -40,7 +41,7 @@ import saros.session.User;
  */
 public class FollowModeManager implements Startable {
 
-  private static final Logger log = Logger.getLogger(FollowModeManager.class);
+  private static final Logger log = LogManager.getLogger(FollowModeManager.class);
 
   private final ISarosSession session;
 

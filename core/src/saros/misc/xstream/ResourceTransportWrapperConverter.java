@@ -5,7 +5,8 @@ import com.thoughtworks.xstream.converters.MarshallingContext;
 import com.thoughtworks.xstream.converters.UnmarshallingContext;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.activities.ResourceTransportWrapper;
 import saros.annotations.Component;
 import saros.communication.extensions.ActivitiesExtension;
@@ -33,7 +34,7 @@ import saros.session.ISarosSession;
 @Component
 public class ResourceTransportWrapperConverter implements Converter, Startable {
 
-  private static final Logger log = Logger.getLogger(ResourceTransportWrapperConverter.class);
+  private static final Logger log = LogManager.getLogger(ResourceTransportWrapperConverter.class);
 
   private static final String PATH = "p";
   private static final String REFERENCE_POINT_ID = "i";

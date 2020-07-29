@@ -24,7 +24,8 @@ import static saros.util.LineSeparatorNormalizationUtil.NORMALIZED_LINE_SEPARATO
 
 import java.security.InvalidParameterException;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.concurrent.jupiter.InclusionTransformation;
 import saros.concurrent.jupiter.Operation;
 import saros.editor.text.TextPosition;
@@ -37,7 +38,8 @@ import saros.editor.text.TextPosition;
  */
 public class GOTOInclusionTransformation implements InclusionTransformation {
 
-  private static final Logger log = Logger.getLogger(GOTOInclusionTransformation.class.getName());
+  private static final Logger log =
+      LogManager.getLogger(GOTOInclusionTransformation.class.getName());
 
   /**
    * Transform operation <var>op1</var> in the context of another operation <var>op2</var>. The

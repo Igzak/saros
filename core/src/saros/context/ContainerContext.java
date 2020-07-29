@@ -2,7 +2,8 @@ package saros.context;
 
 import java.io.File;
 import java.util.List;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.account.XMPPAccountStore;
 import saros.communication.extensions.ActivitiesExtension;
 import saros.communication.extensions.CancelInviteExtension;
@@ -62,7 +63,7 @@ import saros.repackaged.picocontainer.injectors.Reinjector;
  */
 public class ContainerContext implements IContainerContext {
 
-  private static final Logger log = Logger.getLogger(ContainerContext.class);
+  private static final Logger log = LogManager.getLogger(ContainerContext.class);
 
   private static final String SAROS_DATA_DIRECTORY = ".saros";
 

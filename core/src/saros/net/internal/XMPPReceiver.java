@@ -10,7 +10,8 @@ import java.util.Map.Entry;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.zip.DataFormatException;
 import java.util.zip.Inflater;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jivesoftware.smack.Connection;
 import org.jivesoftware.smack.PacketListener;
 import org.jivesoftware.smack.filter.PacketFilter;
@@ -36,7 +37,7 @@ import saros.net.xmpp.XMPPConnectionService;
 @Component(module = "net")
 public class XMPPReceiver implements IReceiver, IBinaryXMPPExtensionReceiver {
 
-  private static final Logger log = Logger.getLogger(XMPPReceiver.class);
+  private static final Logger log = LogManager.getLogger(XMPPReceiver.class);
 
   private static final int CHUNKSIZE = 16 * 1024;
 

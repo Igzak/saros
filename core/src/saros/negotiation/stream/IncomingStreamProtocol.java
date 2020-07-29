@@ -5,7 +5,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.io.input.BoundedInputStream;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.exceptions.LocalCancellationException;
 import saros.filesystem.FileSystem;
 import saros.filesystem.IFile;
@@ -16,7 +17,7 @@ import saros.session.ISarosSession;
 /** Implements Stream processing in {@link AbstractStreamProtocol} format. */
 public class IncomingStreamProtocol extends AbstractStreamProtocol implements AutoCloseable {
 
-  private static final Logger log = Logger.getLogger(IncomingStreamProtocol.class);
+  private static final Logger log = LogManager.getLogger(IncomingStreamProtocol.class);
 
   private DataInputStream in;
   private ISarosSession session;
