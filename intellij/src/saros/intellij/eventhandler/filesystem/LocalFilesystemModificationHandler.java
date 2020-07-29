@@ -23,7 +23,8 @@ import java.text.MessageFormat;
 import java.util.Deque;
 import java.util.Set;
 import java.util.concurrent.ConcurrentLinkedDeque;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import saros.activities.EditorActivity;
@@ -66,7 +67,7 @@ import saros.session.User;
 public class LocalFilesystemModificationHandler extends AbstractActivityProducer
     implements IApplicationEventHandler {
 
-  private static final Logger log = Logger.getLogger(LocalFilesystemModificationHandler.class);
+  private static final Logger log = LogManager.getLogger(LocalFilesystemModificationHandler.class);
 
   private final Project project;
 

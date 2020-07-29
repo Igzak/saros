@@ -8,7 +8,8 @@ import java.io.IOException;
 import java.nio.file.FileAlreadyExistsException;
 import java.util.ArrayList;
 import java.util.List;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import saros.filesystem.IFile;
@@ -19,7 +20,7 @@ import saros.intellij.runtime.FilesystemRunner;
 
 /** Intellij implementation of the Saros folder interface. */
 public class IntellijFolder extends AbstractIntellijResource implements IFolder {
-  private static final Logger log = Logger.getLogger(IntellijFolder.class);
+  private static final Logger log = LogManager.getLogger(IntellijFolder.class);
 
   public IntellijFolder(
       @NotNull IntellijReferencePoint referencePoint, @NotNull IPath relativePath) {

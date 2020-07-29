@@ -1,7 +1,8 @@
 package saros.intellij.ui.widgets.progress;
 
 import com.intellij.openapi.progress.ProgressIndicator;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.monitoring.IProgressMonitor;
 
 /**
@@ -9,7 +10,7 @@ import saros.monitoring.IProgressMonitor;
  */
 public final class ProgressMonitorAdapter implements IProgressMonitor {
 
-  private static final Logger log = Logger.getLogger(ProgressMonitorAdapter.class);
+  private static final Logger log = LogManager.getLogger(ProgressMonitorAdapter.class);
 
   private final ProgressIndicator delegate;
 

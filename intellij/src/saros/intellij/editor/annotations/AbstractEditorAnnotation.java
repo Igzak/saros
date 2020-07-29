@@ -11,7 +11,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import saros.filesystem.IFile;
@@ -32,7 +33,7 @@ import saros.session.User;
  * @see AnnotationRange
  */
 abstract class AbstractEditorAnnotation {
-  private static final Logger log = Logger.getLogger(AbstractEditorAnnotation.class);
+  private static final Logger log = LogManager.getLogger(AbstractEditorAnnotation.class);
 
   private final User user;
   private IFile file;

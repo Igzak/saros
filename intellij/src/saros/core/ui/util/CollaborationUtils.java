@@ -8,7 +8,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Set;
 import org.apache.commons.lang3.tuple.Pair;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.SarosPluginContext;
 import saros.core.monitoring.IStatus;
 import saros.core.monitoring.Status;
@@ -33,7 +34,7 @@ import saros.util.ThreadUtils;
 
 /** Offers convenient methods for collaboration actions like sharing a reference point. */
 public class CollaborationUtils {
-  private static final Logger log = Logger.getLogger(CollaborationUtils.class);
+  private static final Logger log = LogManager.getLogger(CollaborationUtils.class);
 
   @Inject private static ISarosSessionManager sessionManager;
 

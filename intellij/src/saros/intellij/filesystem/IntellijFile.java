@@ -11,7 +11,8 @@ import java.io.OutputStream;
 import java.nio.charset.Charset;
 import java.nio.file.FileAlreadyExistsException;
 import org.apache.commons.io.IOUtils;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import saros.filesystem.IFile;
@@ -21,7 +22,7 @@ import saros.intellij.runtime.FilesystemRunner;
 
 /** Intellij implementation of the Saros file interface. */
 public class IntellijFile extends AbstractIntellijResource implements IFile {
-  private static final Logger log = Logger.getLogger(IntellijFile.class);
+  private static final Logger log = LogManager.getLogger(IntellijFile.class);
 
   public IntellijFile(@NotNull IntellijReferencePoint referencePoint, @NotNull IPath relativePath) {
     super(referencePoint, relativePath);

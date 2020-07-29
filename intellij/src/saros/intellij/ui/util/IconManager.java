@@ -2,11 +2,12 @@ package saros.intellij.ui.util;
 
 import java.net.URL;
 import javax.swing.ImageIcon;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /** Class caches all icons used in application */
 public class IconManager {
-  public static final Logger log = Logger.getLogger(IconManager.class);
+  public static final Logger log = LogManager.getLogger(IconManager.class);
 
   public static final ImageIcon SAROS_ICON = getIcon("/icons/saros/saros_misc.png", "Saros Icon");
 

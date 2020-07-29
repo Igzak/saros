@@ -10,7 +10,8 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.core.ui.util.CollaborationUtils;
 import saros.filesystem.IReferencePoint;
 import saros.intellij.context.SharedIDEContext;
@@ -28,7 +29,7 @@ import saros.net.xmpp.JID;
  */
 public class ShareWithUserAction extends AnAction {
 
-  private static final Logger log = Logger.getLogger(ShareWithUserAction.class);
+  private static final Logger log = LogManager.getLogger(ShareWithUserAction.class);
 
   private final JID userJID;
   private final String title;

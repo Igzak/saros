@@ -6,7 +6,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import saros.filesystem.IFile;
@@ -17,7 +18,7 @@ import saros.filesystem.IResource;
 
 /** Intellij implementation of the Saros reference point interface. */
 public class IntellijReferencePoint implements IReferencePoint {
-  private static final Logger log = Logger.getLogger(IntellijReferencePoint.class);
+  private static final Logger log = LogManager.getLogger(IntellijReferencePoint.class);
 
   /** The project instance the reference point is bound to. */
   private final Project project;

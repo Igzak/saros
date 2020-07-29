@@ -19,7 +19,8 @@ import java.util.Set;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.JPopupMenu;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import saros.core.ui.util.CollaborationUtils;
@@ -42,7 +43,7 @@ import saros.net.xmpp.JID;
 //  TODO move project module to separate section listed first
 class ContactPopMenu extends JPopupMenu {
 
-  private static final Logger log = Logger.getLogger(ContactPopMenu.class);
+  private static final Logger log = LogManager.getLogger(ContactPopMenu.class);
 
   private final ContactTreeRootNode.ContactInfo contactInfo;
 

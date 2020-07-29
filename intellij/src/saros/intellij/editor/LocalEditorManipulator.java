@@ -6,7 +6,8 @@ import com.intellij.openapi.project.Project;
 import com.intellij.openapi.vfs.VirtualFile;
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.Charset;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import saros.editor.IEditorManager;
@@ -24,7 +25,7 @@ import saros.session.User;
 /** This class applies the logic for activities that were received from remote. */
 public class LocalEditorManipulator {
 
-  private static final Logger log = Logger.getLogger(LocalEditorManipulator.class);
+  private static final Logger log = LogManager.getLogger(LocalEditorManipulator.class);
 
   private final AnnotationManager annotationManager;
   private final ISarosSession sarosSession;

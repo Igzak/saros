@@ -8,7 +8,8 @@ import java.text.MessageFormat;
 import java.util.Scanner;
 import javax.swing.JMenuItem;
 import javax.swing.JPopupMenu;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 import saros.SarosPluginContext;
 import saros.account.XMPPAccount;
@@ -25,7 +26,7 @@ import saros.repackaged.picocontainer.annotations.Inject;
 
 /** Implementation of connect XMPP/jabber server button */
 public class ConnectButton extends AbstractToolbarButton {
-  private static final Logger log = Logger.getLogger(ConnectButton.class);
+  private static final Logger log = LogManager.getLogger(ConnectButton.class);
 
   private static final String USER_ID_SEPARATOR = "@";
 

@@ -5,7 +5,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.MessageFormat;
 import java.util.Set;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 import saros.concurrent.watchdog.ConsistencyWatchdogClient;
 import saros.concurrent.watchdog.IsInconsistentObservable;
@@ -31,7 +32,7 @@ import saros.session.SessionEndReason;
  * <p>FIXME: Remove awkward session handling together with UI components created with session.
  */
 public class ConsistencyButton extends AbstractSessionToolbarButton {
-  private static final Logger log = Logger.getLogger(ConsistencyButton.class);
+  private static final Logger log = LogManager.getLogger(ConsistencyButton.class);
 
   private boolean previouslyInConsistentState = true;
 

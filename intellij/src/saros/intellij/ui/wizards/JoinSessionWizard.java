@@ -5,7 +5,8 @@ import static saros.negotiation.NegotiationTools.CancelOption;
 import com.intellij.openapi.project.Project;
 import java.awt.Window;
 import java.text.MessageFormat;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.intellij.ui.Messages;
 import saros.intellij.ui.util.JobWithStatus;
 import saros.intellij.ui.util.NotificationPanel;
@@ -28,7 +29,7 @@ import saros.util.ThreadUtils;
 public class JoinSessionWizard extends Wizard {
   private static final String PAGE_INFO_ID = "JoinSessionInfo";
 
-  private static final Logger log = Logger.getLogger(JoinSessionWizard.class);
+  private static final Logger log = LogManager.getLogger(JoinSessionWizard.class);
 
   private final IncomingSessionNegotiation negotiation;
   private final JID peer;

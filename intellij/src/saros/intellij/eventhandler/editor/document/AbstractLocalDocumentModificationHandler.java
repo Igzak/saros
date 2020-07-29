@@ -7,7 +7,8 @@ import com.intellij.openapi.project.Project;
 import com.intellij.openapi.vfs.VirtualFile;
 import java.util.Collection;
 import java.util.Set;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import saros.filesystem.IFile;
@@ -22,7 +23,7 @@ import saros.session.ISarosSession;
 public abstract class AbstractLocalDocumentModificationHandler implements IProjectEventHandler {
 
   private static final Logger log =
-      Logger.getLogger(AbstractLocalDocumentModificationHandler.class);
+      LogManager.getLogger(AbstractLocalDocumentModificationHandler.class);
 
   protected final Project project;
   protected final EditorManager editorManager;

@@ -1,7 +1,8 @@
 package saros.intellij.context;
 
 import com.intellij.openapi.project.Project;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 import saros.intellij.eventhandler.ApplicationEventHandlers;
 import saros.intellij.eventhandler.ApplicationEventHandlersFactory;
@@ -23,7 +24,7 @@ import saros.repackaged.picocontainer.Disposable;
  * #setProject(Project)}.
  */
 public class SharedIDEContext implements Disposable {
-  private static final Logger log = Logger.getLogger(SharedIDEContext.class);
+  private static final Logger log = LogManager.getLogger(SharedIDEContext.class);
 
   private static Project preregisteredProject;
 

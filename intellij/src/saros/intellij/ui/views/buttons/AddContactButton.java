@@ -5,7 +5,8 @@ import com.intellij.openapi.ui.InputValidator;
 import com.intellij.openapi.util.TextRange;
 import java.text.MessageFormat;
 import java.util.function.BiPredicate;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 import saros.SarosPluginContext;
 import saros.communication.connection.ConnectionHandler;
@@ -23,7 +24,7 @@ import saros.repackaged.picocontainer.annotations.Inject;
 
 /** Button to add a contact to the currently connected account. */
 public class AddContactButton extends AbstractToolbarButton {
-  private static final Logger log = Logger.getLogger(AddContactButton.class);
+  private static final Logger log = LogManager.getLogger(AddContactButton.class);
 
   @Inject private XMPPContactsService xmppContactsService;
   @Inject private ConnectionHandler connectionHandler;

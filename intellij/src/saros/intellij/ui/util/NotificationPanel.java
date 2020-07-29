@@ -6,14 +6,15 @@ import com.intellij.notification.NotificationGroup;
 import com.intellij.notification.NotificationListener;
 import com.intellij.notification.NotificationType;
 import com.intellij.notification.Notifications;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.SarosPluginContext;
 import saros.intellij.runtime.EDTExecutor;
 import saros.repackaged.picocontainer.annotations.Inject;
 
 /** Class uses Intellij API to show notifications */
 public class NotificationPanel {
-  private static final Logger log = Logger.getLogger(NotificationPanel.class);
+  private static final Logger log = LogManager.getLogger(NotificationPanel.class);
 
   private static final String GROUP_NOTIFICATION_ID = "sarosNotification";
   private static final NotificationGroup GROUP_DISPLAY_ID_INFO =

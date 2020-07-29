@@ -6,7 +6,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.ListIterator;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 import saros.filesystem.IFile;
 import saros.intellij.context.SharedIDEContext;
@@ -15,7 +16,7 @@ import saros.intellij.filesystem.VirtualFileConverter;
 /** Class used to capture and re-apply which editors are currently selected by the user. */
 // TODO consider duplicated open editors during screen splitting
 public class SelectedEditorStateSnapshot {
-  private static final Logger log = Logger.getLogger(SelectedEditorStateSnapshot.class);
+  private static final Logger log = LogManager.getLogger(SelectedEditorStateSnapshot.class);
 
   private final List<VirtualFile> selectedEditors;
 

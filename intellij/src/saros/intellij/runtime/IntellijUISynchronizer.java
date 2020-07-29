@@ -2,7 +2,8 @@ package saros.intellij.runtime;
 
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.progress.ProcessCanceledException;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.synchronize.UISynchronizer;
 
 /**
@@ -13,7 +14,7 @@ import saros.synchronize.UISynchronizer;
  */
 public class IntellijUISynchronizer implements UISynchronizer {
 
-  private static final Logger log = Logger.getLogger(IntellijUISynchronizer.class);
+  private static final Logger log = LogManager.getLogger(IntellijUISynchronizer.class);
 
   @Override
   public void asyncExec(Runnable runnable) {

@@ -4,11 +4,12 @@ import com.intellij.openapi.project.Project;
 import com.intellij.openapi.wm.WindowManager;
 import java.awt.Component;
 import javax.swing.JOptionPane;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /** Dialog message helper that shows Dialogs in the current Thread. */
 public class DialogUtils {
-  private static final Logger log = Logger.getLogger(DialogUtils.class);
+  private static final Logger log = LogManager.getLogger(DialogUtils.class);
 
   private DialogUtils() {}
 

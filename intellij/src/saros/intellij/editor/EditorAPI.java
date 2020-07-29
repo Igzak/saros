@@ -12,7 +12,8 @@ import com.intellij.openapi.util.Pair;
 import com.intellij.openapi.vfs.VirtualFile;
 import java.awt.Point;
 import java.awt.Rectangle;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import saros.editor.text.LineRange;
@@ -26,7 +27,7 @@ import saros.intellij.runtime.EDTExecutor;
  * <p>Performs Intellij editor related actions in the UI thread.
  */
 public class EditorAPI {
-  private static Logger log = Logger.getLogger(EditorAPI.class);
+  private static Logger log = LogManager.getLogger(EditorAPI.class);
 
   private EditorAPI() {
     // NOP

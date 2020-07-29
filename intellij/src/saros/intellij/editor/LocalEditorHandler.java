@@ -5,7 +5,8 @@ import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.vfs.VirtualFile;
 import java.util.Set;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import saros.filesystem.IFile;
@@ -20,7 +21,7 @@ import saros.session.ISarosSession;
  */
 public class LocalEditorHandler {
 
-  private static final Logger log = Logger.getLogger(LocalEditorHandler.class);
+  private static final Logger log = LogManager.getLogger(LocalEditorHandler.class);
 
   private final EditorManager manager;
   private final ISarosSession sarosSession;

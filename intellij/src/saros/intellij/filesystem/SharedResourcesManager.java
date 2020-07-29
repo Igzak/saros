@@ -6,7 +6,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.IllegalCharsetNameException;
 import java.nio.charset.UnsupportedCharsetException;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 import saros.activities.FileActivity;
 import saros.activities.FolderCreatedActivity;
@@ -33,7 +34,7 @@ import saros.session.ISarosSession;
 /** The SharedResourcesManager handles file and folder activities. */
 public class SharedResourcesManager implements Startable {
 
-  private static final Logger log = Logger.getLogger(SharedResourcesManager.class);
+  private static final Logger log = LogManager.getLogger(SharedResourcesManager.class);
 
   private final ISarosSession sarosSession;
   private final EditorManager editorManager;

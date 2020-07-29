@@ -5,7 +5,8 @@ import com.intellij.openapi.project.Project;
 import com.intellij.openapi.wm.WindowManager;
 import java.awt.Window;
 import java.text.MessageFormat;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.core.monitoring.IStatus;
 import saros.core.monitoring.Status;
 import saros.intellij.SarosComponent;
@@ -34,7 +35,7 @@ import saros.session.ISarosSessionManager;
  */
 public class NegotiationHandler implements INegotiationHandler {
 
-  private static final Logger log = Logger.getLogger(NegotiationHandler.class);
+  private static final Logger log = LogManager.getLogger(NegotiationHandler.class);
 
   private final ISarosSessionManager sessionManager;
   private final UIProjectUtils projectUtils;

@@ -2,7 +2,8 @@ package saros.intellij.editor.annotations;
 
 import com.intellij.openapi.editor.Editor;
 import java.util.List;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import saros.filesystem.IFile;
@@ -13,7 +14,7 @@ import saros.session.User;
 // TODO move local selections affected by changes while editor is closed; see issue #116
 public class AnnotationManager implements Disposable {
 
-  private static final Logger log = Logger.getLogger(AnnotationManager.class);
+  private static final Logger log = LogManager.getLogger(AnnotationManager.class);
 
   public static final int MAX_CONTRIBUTION_ANNOTATIONS =
       Integer.getInteger("saros.intellij.MAX_CONTRIBUTION_ANNOTATIONS", 50);

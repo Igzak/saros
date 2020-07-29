@@ -14,7 +14,8 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 import org.apache.commons.lang3.StringEscapeUtils;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import saros.activities.EditorActivity;
@@ -56,7 +57,7 @@ import saros.synchronize.Blockable;
 /** Intellij implementation of the {@link IEditorManager} interface. */
 public class EditorManager extends AbstractActivityProducer implements IEditorManager {
 
-  private static final Logger log = Logger.getLogger(EditorManager.class);
+  private static final Logger log = LogManager.getLogger(EditorManager.class);
 
   private final Blockable stopManagerListener =
       new Blockable() {

@@ -9,7 +9,8 @@ import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.util.messages.MessageBusConnection;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import saros.editor.text.LineRange;
@@ -23,7 +24,7 @@ import saros.intellij.runtime.EDTExecutor;
  * adjustment once the corresponding editor is selected.
  */
 public class ViewportAdjustmentExecutor extends AbstractLocalEditorStatusChangeHandler {
-  private static final Logger log = Logger.getLogger(ViewportAdjustmentExecutor.class);
+  private static final Logger log = LogManager.getLogger(ViewportAdjustmentExecutor.class);
 
   private final LocalEditorManipulator localEditorManipulator;
 

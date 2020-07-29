@@ -13,7 +13,8 @@ import com.intellij.openapi.project.Project;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 import saros.filesystem.IFile;
 import saros.intellij.editor.EditorManager;
@@ -31,7 +32,7 @@ import saros.intellij.eventhandler.IProjectEventHandler;
  * @see CaretListener#caretPositionChanged(CaretEvent)
  */
 public class LocalCaretPositionChangeHandler implements IProjectEventHandler {
-  private static final Logger log = Logger.getLogger(LocalCaretPositionChangeHandler.class);
+  private static final Logger log = LogManager.getLogger(LocalCaretPositionChangeHandler.class);
 
   private final Project project;
   private final EditorManager editorManager;

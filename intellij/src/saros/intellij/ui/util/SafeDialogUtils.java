@@ -8,7 +8,8 @@ import com.intellij.openapi.ui.InputValidator;
 import com.intellij.openapi.ui.Messages;
 import com.intellij.openapi.util.Computable;
 import com.intellij.openapi.util.TextRange;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 import saros.SarosPluginContext;
 import saros.exceptions.IllegalAWTContextException;
@@ -28,7 +29,7 @@ import saros.intellij.runtime.EDTExecutor;
  * Application#invokeLater(Runnable,ModalityState)}.
  */
 public class SafeDialogUtils {
-  private static final Logger log = Logger.getLogger(SafeDialogUtils.class);
+  private static final Logger log = LogManager.getLogger(SafeDialogUtils.class);
 
   private static final Application application;
 

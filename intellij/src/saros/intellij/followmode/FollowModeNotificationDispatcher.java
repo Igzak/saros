@@ -1,7 +1,8 @@
 package saros.intellij.followmode;
 
 import java.text.MessageFormat;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.editor.FollowModeManager;
 import saros.editor.IFollowModeListener;
 import saros.intellij.ui.Messages;
@@ -11,7 +12,7 @@ import saros.session.User;
 /** Displays user notifications about follow mode status changes. */
 public class FollowModeNotificationDispatcher implements IFollowModeListener {
 
-  private static final Logger log = Logger.getLogger(FollowModeNotificationDispatcher.class);
+  private static final Logger log = LogManager.getLogger(FollowModeNotificationDispatcher.class);
 
   private User followedUser;
 
