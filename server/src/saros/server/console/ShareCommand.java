@@ -4,7 +4,8 @@ import java.io.PrintStream;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.filesystem.IReferencePoint;
 import saros.server.filesystem.ServerProjectImpl;
 import saros.server.filesystem.ServerWorkspaceImpl;
@@ -12,7 +13,7 @@ import saros.session.ISarosSession;
 import saros.session.ISarosSessionManager;
 
 public class ShareCommand extends ConsoleCommand {
-  private static final Logger log = Logger.getLogger(ShareCommand.class);
+  private static final Logger log = LogManager.getLogger(ShareCommand.class);
   private final ISarosSessionManager sessionManager;
   private final ServerWorkspaceImpl workspace;
 

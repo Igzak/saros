@@ -10,13 +10,14 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.InvalidPropertiesFormatException;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.preferences.PreferenceStore;
 
 /** Preference store allowing the storing and retrieving of the preferences to and from a file. */
 public final class PersistencePreferenceStore extends PreferenceStore {
 
-  private static final Logger log = Logger.getLogger(PersistencePreferenceStore.class);
+  private static final Logger log = LogManager.getLogger(PersistencePreferenceStore.class);
 
   private File preferenceFile;
 

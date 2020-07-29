@@ -1,7 +1,8 @@
 package saros.server.session;
 
 import java.io.IOException;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.activities.FolderCreatedActivity;
 import saros.activities.FolderDeletedActivity;
 import saros.filesystem.IFolder;
@@ -13,7 +14,7 @@ import saros.session.ISarosSession;
 /** Executes FolderActivities and performs actual filesystem operations. */
 public class FolderActivityExecutor extends AbstractActivityConsumer implements Startable {
 
-  private static final Logger log = Logger.getLogger(FolderActivityExecutor.class);
+  private static final Logger log = LogManager.getLogger(FolderActivityExecutor.class);
 
   private final ISarosSession session;
   private final ServerEditorManager editorManager;

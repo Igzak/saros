@@ -12,14 +12,15 @@ import java.nio.file.Files;
 import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.filesystem.IFile;
 import saros.filesystem.IPath;
 
 /** Server implementation of the {@link IFile} interface. */
 public class ServerFileImpl extends ServerResourceImpl implements IFile {
 
-  private static final Logger log = Logger.getLogger(ServerFileImpl.class);
+  private static final Logger log = LogManager.getLogger(ServerFileImpl.class);
 
   private static final String DEFAULT_CHARSET = "UTF-8";
 

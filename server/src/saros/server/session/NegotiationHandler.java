@@ -6,7 +6,8 @@ import java.util.Map;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.filesystem.IReferencePoint;
 import saros.monitoring.NullProgressMonitor;
 import saros.negotiation.AbstractIncomingResourceNegotiation;
@@ -28,7 +29,7 @@ import saros.util.NamedThreadFactory;
 
 public class NegotiationHandler implements INegotiationHandler {
 
-  private static final Logger log = Logger.getLogger(NegotiationHandler.class);
+  private static final Logger log = LogManager.getLogger(NegotiationHandler.class);
 
   private final ISarosSessionManager sessionManager;
   private final ServerWorkspaceImpl workspace;

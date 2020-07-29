@@ -9,7 +9,8 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArrayList;
 import org.apache.commons.collections4.map.LRUMap;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.activities.TextEditActivity;
 import saros.editor.IEditorManager;
 import saros.editor.ISharedEditorListener;
@@ -27,7 +28,7 @@ import saros.util.LineSeparatorNormalizationUtil;
 /** Server implementation of the {@link IEditorManager} interface */
 public class ServerEditorManager implements IEditorManager {
 
-  private static final Logger log = Logger.getLogger(ServerEditorManager.class);
+  private static final Logger log = LogManager.getLogger(ServerEditorManager.class);
 
   private Map<IFile, Editor> openEditors = Collections.synchronizedMap(new LRUMap<>(10));
   private List<ISharedEditorListener> listeners = new CopyOnWriteArrayList<>();

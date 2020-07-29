@@ -1,12 +1,13 @@
 package saros.server;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.server.console.ServerConsole;
 
 /** The entry point for the Saros server. */
 public class SarosServer {
 
-  private static final Logger log = Logger.getLogger(SarosServer.class);
+  private static final Logger log = LogManager.getLogger(SarosServer.class);
 
   private ServerLifecycle lifecycle;
 

@@ -4,7 +4,8 @@ import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.RejectedExecutionException;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jivesoftware.smack.PacketListener;
 import org.jivesoftware.smack.packet.Packet;
 import saros.communication.extensions.JoinSessionRequestExtension;
@@ -17,7 +18,7 @@ import saros.util.NamedThreadFactory;
 public final class JoinSessionRequestHandler {
   private final ISarosSessionManager sessionManager;
 
-  private static final Logger log = Logger.getLogger(JoinSessionRequestHandler.class);
+  private static final Logger log = LogManager.getLogger(JoinSessionRequestHandler.class);
 
   /**
    * Invitation Requests are handled very fast and are almost immediately dispatched into another

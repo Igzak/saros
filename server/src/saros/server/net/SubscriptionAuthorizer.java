@@ -1,6 +1,7 @@
 package saros.server.net;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.annotations.Component;
 import saros.net.xmpp.JID;
 import saros.net.xmpp.subscription.SubscriptionHandler;
@@ -13,7 +14,7 @@ import saros.net.xmpp.subscription.SubscriptionListener;
 @Component(module = "server")
 public class SubscriptionAuthorizer implements SubscriptionListener {
 
-  private static final Logger log = Logger.getLogger(SubscriptionAuthorizer.class);
+  private static final Logger log = LogManager.getLogger(SubscriptionAuthorizer.class);
 
   private SubscriptionHandler subscriptionHandler;
 

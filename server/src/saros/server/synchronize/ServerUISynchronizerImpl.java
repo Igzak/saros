@@ -5,7 +5,8 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.ThreadFactory;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.annotations.Component;
 import saros.synchronize.UISynchronizer;
 
@@ -16,7 +17,7 @@ import saros.synchronize.UISynchronizer;
 @Component(module = "server")
 public class ServerUISynchronizerImpl implements UISynchronizer {
 
-  private static final Logger log = Logger.getLogger(ServerUISynchronizerImpl.class);
+  private static final Logger log = LogManager.getLogger(ServerUISynchronizerImpl.class);
 
   private ExecutorService executor;
   private Thread virtualUIThread;

@@ -5,13 +5,14 @@ import static java.util.stream.Collectors.partitioningBy;
 import java.io.PrintStream;
 import java.util.List;
 import java.util.Map;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.net.util.XMPPUtils;
 import saros.net.xmpp.JID;
 import saros.session.ISarosSessionManager;
 
 public class InviteCommand extends ConsoleCommand {
-  private static final Logger log = Logger.getLogger(InviteCommand.class);
+  private static final Logger log = LogManager.getLogger(InviteCommand.class);
   private final ISarosSessionManager sessionManager;
 
   public InviteCommand(ISarosSessionManager sessionManager, ServerConsole console) {

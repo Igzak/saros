@@ -4,7 +4,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import org.apache.commons.io.FileUtils;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.context.AbstractContextFactory;
 import saros.context.IContextKeyBindings;
 import saros.filesystem.IPath;
@@ -42,7 +43,7 @@ import saros.synchronize.UISynchronizer;
  */
 public class ServerContextFactory extends AbstractContextFactory {
 
-  private static final Logger log = Logger.getLogger(ServerContextFactory.class);
+  private static final Logger log = LogManager.getLogger(ServerContextFactory.class);
 
   @Override
   public void createComponents(MutablePicoContainer c) {

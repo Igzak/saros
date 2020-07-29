@@ -5,7 +5,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.IllegalCharsetNameException;
 import java.nio.charset.UnsupportedCharsetException;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.activities.FileActivity;
 import saros.filesystem.IFile;
 import saros.repackaged.picocontainer.Startable;
@@ -16,7 +17,7 @@ import saros.session.ISarosSession;
 /** Executes FileActivities and performs actual filesystem operations. */
 public class FileActivityExecutor extends AbstractActivityConsumer implements Startable {
 
-  private static final Logger log = Logger.getLogger(FileActivityExecutor.class);
+  private static final Logger log = LogManager.getLogger(FileActivityExecutor.class);
 
   private final ISarosSession session;
   private final ServerEditorManager editorManager;
