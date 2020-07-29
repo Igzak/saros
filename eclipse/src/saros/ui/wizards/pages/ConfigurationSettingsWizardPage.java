@@ -2,7 +2,8 @@ package saros.ui.wizards.pages;
 
 import java.util.ArrayList;
 import java.util.List;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.bitlet.weupnp.GatewayDevice;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
@@ -35,7 +36,7 @@ import saros.util.ThreadUtils;
  */
 public class ConfigurationSettingsWizardPage extends WizardPage {
 
-  private static final Logger log = Logger.getLogger(ConfigurationSettingsWizardPage.class);
+  private static final Logger log = LogManager.getLogger(ConfigurationSettingsWizardPage.class);
 
   public static final String TITLE = saros.ui.Messages.ConfigurationSettingsWizardPage_title;
   public static final String DESCRIPTION =

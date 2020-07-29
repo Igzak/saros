@@ -1,7 +1,8 @@
 package saros.ui.jobs;
 
 import java.io.File;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
@@ -17,7 +18,7 @@ import saros.net.xmpp.filetransfer.XMPPFileTransferRequest;
  */
 public final class IncomingFileTransferJob extends FileTransferJob {
 
-  private static final Logger log = Logger.getLogger(IncomingFileTransferJob.class);
+  private static final Logger log = LogManager.getLogger(IncomingFileTransferJob.class);
 
   private final XMPPFileTransferRequest request;
   private final File file;

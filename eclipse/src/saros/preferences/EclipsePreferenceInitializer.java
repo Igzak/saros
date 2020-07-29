@@ -1,6 +1,7 @@
 package saros.preferences;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.core.runtime.preferences.AbstractPreferenceInitializer;
 import org.eclipse.core.runtime.preferences.DefaultScope;
 import org.eclipse.jface.dialogs.MessageDialogWithToggle;
@@ -18,7 +19,8 @@ public class EclipsePreferenceInitializer extends AbstractPreferenceInitializer 
   /*
    * @see org.eclipse.core.runtime.preferences.AbstractPreferenceInitializer
    */
-  private static final Logger log = Logger.getLogger(EclipsePreferenceInitializer.class.getName());
+  private static final Logger log =
+      LogManager.getLogger(EclipsePreferenceInitializer.class.getName());
 
   @Override
   public void initializeDefaultPreferences() {

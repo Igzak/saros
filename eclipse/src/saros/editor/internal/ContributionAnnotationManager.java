@@ -11,7 +11,8 @@ import java.util.Map;
 import java.util.Set;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.commons.lang3.tuple.Pair;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.text.IDocument;
 import org.eclipse.jface.text.Position;
@@ -43,7 +44,7 @@ import saros.ui.util.SWTUtils;
 // <p>TODO Move responsibilities from EditorManager to here
 public class ContributionAnnotationManager {
 
-  private static final Logger log = Logger.getLogger(ContributionAnnotationManager.class);
+  private static final Logger log = LogManager.getLogger(ContributionAnnotationManager.class);
 
   private final Map<User, ContributionAnnotationHistory> sourceToHistory = new HashMap<>();
 

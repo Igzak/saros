@@ -1,6 +1,7 @@
 package saros.synchronize.internal;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.swt.SWTException;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.PlatformUI;
@@ -11,7 +12,7 @@ import saros.util.StackTrace;
 @Component(module = "eclipse")
 public class EclipseSWTSynchronizer implements UISynchronizer {
 
-  private static final Logger log = Logger.getLogger(EclipseSWTSynchronizer.class);
+  private static final Logger log = LogManager.getLogger(EclipseSWTSynchronizer.class);
 
   @Override
   public void asyncExec(Runnable runnable) {

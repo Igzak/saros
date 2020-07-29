@@ -3,7 +3,8 @@ package saros.communication.chat.muc.negotiation;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.jface.preference.IPreferenceStore;
 import saros.communication.chat.muc.MultiUserChatPreferences;
 import saros.negotiation.hooks.ISessionNegotiationHook;
@@ -29,7 +30,7 @@ import saros.session.ISarosSessionManager;
  */
 public class MUCNegotiationManager {
 
-  private static final Logger log = Logger.getLogger(MUCNegotiationManager.class);
+  private static final Logger log = LogManager.getLogger(MUCNegotiationManager.class);
 
   private static final String NOT_IN_SESSION = "NOT_IN_SESSION";
 

@@ -3,7 +3,8 @@ package saros.ui.jobs;
 import java.io.File;
 import java.io.IOException;
 import java.util.function.BooleanSupplier;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
@@ -22,7 +23,7 @@ import saros.repackaged.picocontainer.annotations.Inject;
  * <p>This job supports cancellation.
  */
 public final class OutgoingFileTransferJob extends FileTransferJob {
-  private static final Logger log = Logger.getLogger(OutgoingFileTransferJob.class);
+  private static final Logger log = LogManager.getLogger(OutgoingFileTransferJob.class);
 
   @Inject private XMPPFileTransferManager transferManager;
   private final File file;

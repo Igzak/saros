@@ -4,7 +4,8 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.part.FileEditorInput;
@@ -19,7 +20,7 @@ import saros.ui.util.SWTUtils;
  */
 public class DirtyStateListener implements IElementStateListener {
 
-  private static final Logger log = Logger.getLogger(DirtyStateListener.class);
+  private static final Logger log = LogManager.getLogger(DirtyStateListener.class);
 
   private final EditorManager editorManager;
 

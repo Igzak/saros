@@ -1,7 +1,8 @@
 package saros.ui.eventhandler;
 
 import java.text.MessageFormat;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.jface.dialogs.MessageDialog;
 import saros.account.XMPPAccount;
 import saros.communication.connection.ConnectionHandler;
@@ -18,7 +19,7 @@ import saros.ui.util.XMPPConnectionSupport;
  */
 public class ConnectingFailureHandler implements IConnectingFailureCallback {
 
-  private static final Logger log = Logger.getLogger(ConnectingFailureHandler.class);
+  private static final Logger log = LogManager.getLogger(ConnectingFailureHandler.class);
 
   private boolean isHandling;
 

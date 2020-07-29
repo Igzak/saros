@@ -1,6 +1,7 @@
 package saros.ui;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.DecorationOverlayIcon;
 import org.eclipse.jface.viewers.IDecoration;
@@ -15,7 +16,7 @@ import saros.Saros;
  */
 public class ImageManager {
 
-  private static final Logger log = Logger.getLogger(ImageManager.class);
+  private static final Logger log = LogManager.getLogger(ImageManager.class);
 
   /*
    * overlays

@@ -1,7 +1,8 @@
 package saros.ui.widgets;
 
 import java.util.List;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.CLabel;
 import org.eclipse.swt.events.DisposeEvent;
@@ -33,7 +34,7 @@ import saros.ui.views.SarosView;
 // FIXME displaying account related information is not the best decision.
 public class ConnectionStateComposite extends Composite {
 
-  private static final Logger log = Logger.getLogger(ConnectionStateComposite.class);
+  private static final Logger log = LogManager.getLogger(ConnectionStateComposite.class);
 
   private static final String CONNECTED_TOOLTIP =
       Messages.ConnectionStateComposite_tooltip_connected;

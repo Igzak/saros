@@ -7,7 +7,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.jface.text.IDocument;
 import org.eclipse.jface.text.IDocumentListener;
@@ -31,7 +32,7 @@ import saros.session.User.Permission;
  */
 final class EditorPool {
 
-  private static final Logger log = Logger.getLogger(EditorPool.class);
+  private static final Logger log = LogManager.getLogger(EditorPool.class);
 
   /*
    * The values might change over time but we need the original state when an

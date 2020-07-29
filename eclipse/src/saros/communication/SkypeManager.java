@@ -6,7 +6,8 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.SystemUtils;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.jface.preference.IPreferenceStore;
 import saros.net.xmpp.contact.XMPPContact;
 import saros.preferences.PreferenceConstants;
@@ -17,7 +18,7 @@ import saros.preferences.PreferenceConstants;
  */
 public class SkypeManager {
 
-  private static final Logger log = Logger.getLogger(SkypeManager.class);
+  private static final Logger log = LogManager.getLogger(SkypeManager.class);
 
   private final InfoManager infoManager;
   private final IPreferenceStore preferenceStore;

@@ -3,7 +3,8 @@ package saros.ui.actions;
 import java.util.ArrayList;
 import java.util.List;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.jface.action.Action;
 import org.eclipse.jface.dialogs.ProgressMonitorDialog;
@@ -28,7 +29,7 @@ public class RemoveUserAction extends Action {
 
   public static final String ACTION_ID = RemoveUserAction.class.getName();
 
-  private static final Logger log = Logger.getLogger(RemoveUserAction.class);
+  private static final Logger log = LogManager.getLogger(RemoveUserAction.class);
 
   @Inject private ISarosSessionManager sessionManager;
 

@@ -16,7 +16,7 @@ import saros.filesystem.IFile;
 /** testing TextOperationHistory and UndoManager */
 public class UndoTest {
 
-  // private static final Logger log = Logger.getLogger(UndoTest.class);
+  // private static final Logger log = LogManager.getLogger(UndoTest.class);
 
   private IFile file1;
   private IFile file2;

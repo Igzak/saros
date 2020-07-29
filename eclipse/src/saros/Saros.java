@@ -3,8 +3,9 @@ package saros;
 import java.io.File;
 import java.io.InputStream;
 import java.util.concurrent.atomic.AtomicBoolean;
-import org.apache.log4j.Logger;
 import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.core.config.ConfigurationSource;
 import org.apache.logging.log4j.core.config.Configurator;
 import org.apache.logging.log4j.core.lookup.MainMapLookup;
@@ -286,7 +287,7 @@ public class Saros extends AbstractUIPlugin {
       e.printStackTrace();
     }
 
-    log = Logger.getLogger(this.getClass());
+    log = LogManager.getLogger(this.getClass());
   }
 
   private String getPlatformInformation() {

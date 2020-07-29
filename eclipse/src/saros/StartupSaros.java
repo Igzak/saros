@@ -1,6 +1,7 @@
 package saros;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.ui.IStartup;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.intro.IIntroManager;
@@ -21,7 +22,7 @@ import saros.ui.util.XMPPConnectionSupport;
  */
 public class StartupSaros implements IStartup {
 
-  private static final Logger log = Logger.getLogger(StartupSaros.class);
+  private static final Logger log = LogManager.getLogger(StartupSaros.class);
 
   @Inject private Preferences preferences;
 

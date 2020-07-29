@@ -15,7 +15,8 @@ import java.util.Map.Entry;
 import java.util.Set;
 import java.util.regex.Pattern;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
@@ -75,7 +76,7 @@ import saros.util.ThreadUtils;
 
 public class AddProjectToSessionWizard extends Wizard {
 
-  private static Logger log = Logger.getLogger(AddProjectToSessionWizard.class);
+  private static Logger log = LogManager.getLogger(AddProjectToSessionWizard.class);
 
   private EnterProjectNamePage namePage;
   private WizardDialogAccessable wizardDialog;

@@ -1,6 +1,7 @@
 package saros.ui.util;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.SWTException;
@@ -14,7 +15,7 @@ import saros.util.ThreadUtils;
 /** Central access point for the UI to connect and disconnect to an XMPP server. */
 public class XMPPConnectionSupport {
 
-  private static final Logger log = Logger.getLogger(XMPPConnectionSupport.class);
+  private static final Logger log = LogManager.getLogger(XMPPConnectionSupport.class);
 
   private static XMPPConnectionSupport instance;
 

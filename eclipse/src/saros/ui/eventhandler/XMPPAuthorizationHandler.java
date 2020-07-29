@@ -1,7 +1,8 @@
 package saros.ui.eventhandler;
 
 import java.text.MessageFormat;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.jface.dialogs.MessageDialog;
 import saros.net.xmpp.JID;
 import saros.net.xmpp.subscription.SubscriptionHandler;
@@ -12,7 +13,7 @@ import saros.ui.util.SWTUtils;
 /** Handler for accepting or rejecting incoming XMPP subscription requests */
 public class XMPPAuthorizationHandler {
 
-  private static final Logger log = Logger.getLogger(XMPPAuthorizationHandler.class);
+  private static final Logger log = LogManager.getLogger(XMPPAuthorizationHandler.class);
 
   private final SubscriptionHandler subscriptionHandler;
 

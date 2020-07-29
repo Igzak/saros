@@ -1,6 +1,7 @@
 package saros.editor;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.jface.text.IDocument;
 import org.eclipse.jface.text.ITextListener;
 import org.eclipse.jface.text.ITextSelection;
@@ -27,7 +28,7 @@ import saros.editor.text.TextSelection;
  */
 public class EditorListener {
 
-  private static final Logger log = Logger.getLogger(EditorListener.class.getName());
+  private static final Logger log = LogManager.getLogger(EditorListener.class.getName());
 
   protected final EditorManager manager;
 

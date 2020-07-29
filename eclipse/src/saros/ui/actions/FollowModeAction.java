@@ -5,7 +5,8 @@ import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.jface.action.Action;
 import org.eclipse.jface.action.ActionContributionItem;
 import org.eclipse.jface.action.IMenuCreator;
@@ -39,7 +40,7 @@ public class FollowModeAction extends Action implements IMenuCreator, Disposable
 
   public static final String ACTION_ID = FollowModeAction.class.getName();
 
-  private static final Logger log = Logger.getLogger(FollowModeAction.class);
+  private static final Logger log = LogManager.getLogger(FollowModeAction.class);
 
   private ISelectionListener selectionListener =
       new ISelectionListener() {

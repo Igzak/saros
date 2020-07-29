@@ -2,7 +2,8 @@ package saros.ui.decorators;
 
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.IDecoration;
@@ -47,7 +48,7 @@ import saros.ui.util.SWTUtils;
 @Component(module = "eclipse")
 public final class SharedProjectDecorator implements ILightweightLabelDecorator {
 
-  private static final Logger log = Logger.getLogger(SharedProjectDecorator.class);
+  private static final Logger log = LogManager.getLogger(SharedProjectDecorator.class);
 
   private static final ImageDescriptor PROJECT_DESCRIPTOR =
       ImageManager.getImageDescriptor("icons/ovr16/shared.png"); // NON-NLS-1

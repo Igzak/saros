@@ -1,7 +1,8 @@
 package saros.ui.wizards.pages;
 
 import java.util.List;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.jface.dialogs.IMessageProvider;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
@@ -27,7 +28,7 @@ import saros.ui.widgets.viewer.roster.events.ContactSelectionListener;
  * @author bkahlert
  */
 public class ContactSelectionWizardPage extends WizardPage {
-  private static final Logger log = Logger.getLogger(ContactSelectionWizardPage.class);
+  private static final Logger log = LogManager.getLogger(ContactSelectionWizardPage.class);
 
   protected static final String TITLE = Messages.ContactSelectionWizardPage_title;
   protected static final String DESCRIPTION = Messages.ContactSelectionWizardPage_description;

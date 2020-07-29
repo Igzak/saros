@@ -5,7 +5,8 @@ import java.util.Objects;
 import java.util.Set;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.commons.lang3.tuple.Pair;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.runtime.CoreException;
@@ -56,7 +57,7 @@ import saros.util.StackTrace;
  */
 public class EditorAPI {
 
-  private static final Logger log = Logger.getLogger(EditorAPI.class);
+  private static final Logger log = LogManager.getLogger(EditorAPI.class);
 
   private static final String[] RESTRICTED_ACTION = {
     ITextEditorActionConstants.CUT_LINE,

@@ -2,7 +2,8 @@ package saros.project;
 
 import java.util.ArrayList;
 import java.util.List;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
@@ -30,7 +31,7 @@ import saros.util.FileUtils;
  */
 final class ProjectDeltaVisitor implements IResourceDeltaVisitor {
 
-  private static final Logger log = Logger.getLogger(ProjectDeltaVisitor.class);
+  private static final Logger log = LogManager.getLogger(ProjectDeltaVisitor.class);
 
   private static final int CAPACITY_THRESHOLD = 128;
 

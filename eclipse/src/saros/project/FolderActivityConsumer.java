@@ -1,6 +1,7 @@
 package saros.project;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.runtime.CoreException;
 import saros.activities.FolderCreatedActivity;
@@ -14,7 +15,7 @@ import saros.util.FileUtils;
 
 public final class FolderActivityConsumer extends AbstractActivityConsumer implements Startable {
 
-  private static final Logger log = Logger.getLogger(FolderActivityConsumer.class);
+  private static final Logger log = LogManager.getLogger(FolderActivityConsumer.class);
 
   private final ISarosSession session;
   private final SharedResourcesManager resourceChangeListener;

@@ -3,7 +3,8 @@ package saros.monitoring.remote;
 import java.util.Objects;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.TimeUnit;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
@@ -17,7 +18,7 @@ import saros.util.CoreUtils;
 /** Eclipse-specific implementation of the {@link IRemoteProgressIndicator} interface. */
 final class EclipseRemoteProgressIndicatorImpl implements IRemoteProgressIndicator {
 
-  private static final Logger log = Logger.getLogger(EclipseRemoteProgressIndicatorImpl.class);
+  private static final Logger log = LogManager.getLogger(EclipseRemoteProgressIndicatorImpl.class);
 
   private final RemoteProgressManager rpm;
   private final String remoteProgressID;

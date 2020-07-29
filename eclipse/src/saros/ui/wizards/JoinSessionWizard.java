@@ -2,7 +2,8 @@ package saros.ui.wizards;
 
 import java.lang.reflect.InvocationTargetException;
 import java.text.MessageFormat;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.jface.dialogs.IDialogConstants;
 import org.eclipse.jface.operation.IRunnableWithProgress;
@@ -37,7 +38,7 @@ import saros.util.ThreadUtils;
  */
 public class JoinSessionWizard extends Wizard {
 
-  private static final Logger log = Logger.getLogger(JoinSessionWizard.class);
+  private static final Logger log = LogManager.getLogger(JoinSessionWizard.class);
 
   private boolean isNegotiationRunning = false;
 

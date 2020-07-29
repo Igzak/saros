@@ -6,7 +6,8 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.jface.text.Position;
 import org.eclipse.jface.text.source.Annotation;
 import org.eclipse.jface.text.source.IAnnotationModel;
@@ -20,7 +21,7 @@ import saros.util.Predicate;
 /** This class holds convenience methods for managing annotations. */
 public class AnnotationModelHelper {
 
-  private static final Logger log = Logger.getLogger(AnnotationModelHelper.class);
+  private static final Logger log = LogManager.getLogger(AnnotationModelHelper.class);
 
   private static Iterable<Annotation> toIterable(final IAnnotationModel model) {
     return new Iterable<Annotation>() {

@@ -3,7 +3,8 @@ package saros.ui.sounds;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.core.runtime.FileLocator;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.jface.preference.IPreferenceStore;
@@ -15,7 +16,7 @@ import saros.util.ThreadUtils;
 
 public class SoundPlayer {
 
-  private static final Logger log = Logger.getLogger(SoundPlayer.class.getName());
+  private static final Logger log = LogManager.getLogger(SoundPlayer.class.getName());
 
   private static final String SOUND_DIR = "/assets/sounds/";
 

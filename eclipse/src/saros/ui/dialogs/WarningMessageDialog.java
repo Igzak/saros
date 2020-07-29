@@ -1,12 +1,13 @@
 package saros.ui.dialogs;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import saros.ui.util.DialogUtils;
 import saros.ui.util.SWTUtils;
 
 public class WarningMessageDialog {
 
-  private static final Logger log = Logger.getLogger(WarningMessageDialog.class.getName());
+  private static final Logger log = LogManager.getLogger(WarningMessageDialog.class.getName());
 
   /**
    * Opens a modal dialog (with the given title) which displays the given warning message to the

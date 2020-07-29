@@ -3,7 +3,8 @@ package saros.ui.wizards;
 import java.lang.reflect.InvocationTargetException;
 import java.util.concurrent.CancellationException;
 import java.util.function.BiPredicate;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.jface.wizard.WizardPage;
@@ -20,7 +21,7 @@ import saros.ui.wizards.pages.AddContactWizardPage;
 
 /** Wizard for adding a new contact to the Contact list of the currently connected user. */
 public class AddContactWizard extends Wizard {
-  private static final Logger log = Logger.getLogger(AddContactWizard.class);
+  private static final Logger log = LogManager.getLogger(AddContactWizard.class);
 
   public static final String TITLE = Messages.AddContactWizard_title;
 

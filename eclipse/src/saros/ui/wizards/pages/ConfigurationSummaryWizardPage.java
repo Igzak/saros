@@ -1,7 +1,8 @@
 package saros.ui.wizards.pages;
 
 import java.text.MessageFormat;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Image;
@@ -28,7 +29,7 @@ import saros.ui.wizards.ConfigurationWizard;
  */
 public class ConfigurationSummaryWizardPage extends WizardPage {
 
-  private static final Logger log = Logger.getLogger(ConfigurationSummaryWizardPage.class);
+  private static final Logger log = LogManager.getLogger(ConfigurationSummaryWizardPage.class);
 
   public static final String TITLE = saros.ui.Messages.ConfigurationSummaryWizardPage_title;
   public static final String DESCRIPTION =

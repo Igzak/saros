@@ -3,7 +3,8 @@ package saros.ui.actions;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 import java.util.concurrent.CancellationException;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.jface.action.Action;
 import org.eclipse.jface.dialogs.MessageDialog;
@@ -37,7 +38,7 @@ import saros.util.ThreadUtils;
  */
 public class ChangeWriteAccessAction extends Action implements Disposable {
 
-  private static final Logger log = Logger.getLogger(ChangeWriteAccessAction.class);
+  private static final Logger log = LogManager.getLogger(ChangeWriteAccessAction.class);
 
   public static final class WriteAccess {
     public static final String ACTION_ID =

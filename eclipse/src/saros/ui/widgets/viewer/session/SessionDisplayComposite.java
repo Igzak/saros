@@ -1,6 +1,7 @@
 package saros.ui.widgets.viewer.session;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.jface.viewers.StructuredViewer;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.Viewer;
@@ -45,7 +46,7 @@ import saros.ui.widgets.viewer.ViewerComposite;
  */
 public abstract class SessionDisplayComposite extends ViewerComposite<TreeViewer> {
 
-  private static final Logger log = Logger.getLogger(SessionDisplayComposite.class);
+  private static final Logger log = LogManager.getLogger(SessionDisplayComposite.class);
 
   @Inject protected ISarosSessionManager sessionManager;
 

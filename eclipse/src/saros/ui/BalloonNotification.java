@@ -3,7 +3,8 @@ package saros.ui;
 import com.novocode.naf.swt.custom.BalloonWindow;
 import java.util.ArrayList;
 import java.util.List;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Point;
@@ -17,7 +18,7 @@ import saros.util.ThreadUtils;
 
 public class BalloonNotification {
 
-  private static final Logger log = Logger.getLogger(BalloonNotification.class.getName());
+  private static final Logger log = LogManager.getLogger(BalloonNotification.class.getName());
 
   private static Color BLACK = Display.getDefault().getSystemColor(SWT.COLOR_BLACK);
   private static Color WHITE = Display.getDefault().getSystemColor(SWT.COLOR_WHITE);

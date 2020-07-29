@@ -2,7 +2,8 @@ package saros.ui.util;
 
 import java.util.Collection;
 import java.util.concurrent.Callable;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.jface.window.Window;
 import org.eclipse.jface.wizard.IWizard;
@@ -24,7 +25,7 @@ import saros.ui.wizards.StartSessionWizard;
 
 /** Utility class for {@link IWizard}s */
 public class WizardUtils {
-  private static final Logger log = Logger.getLogger(WizardUtils.class.getName());
+  private static final Logger log = LogManager.getLogger(WizardUtils.class.getName());
 
   /**
    * Open a wizard in the SWT thread and returns the {@link WizardDialog}'s return code.

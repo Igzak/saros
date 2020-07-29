@@ -1,6 +1,7 @@
 package saros.ui.util;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.IWorkbenchWindow;
@@ -10,7 +11,7 @@ import saros.ui.views.SarosView;
 
 public class ViewUtils {
 
-  private static final Logger log = Logger.getLogger(ViewUtils.class);
+  private static final Logger log = LogManager.getLogger(ViewUtils.class);
 
   public static void openSarosView() {
     /*

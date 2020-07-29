@@ -1,6 +1,7 @@
 package saros.editor;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.swt.widgets.Display;
 import saros.activities.EditorActivity;
 import saros.activities.IActivity;
@@ -23,7 +24,7 @@ final class EditorActivityDelayer extends AbstractActivityProducer {
 
   private static final int DELAY = 100; // ms
 
-  private static final Logger log = Logger.getLogger(EditorActivityDelayer.class);
+  private static final Logger log = LogManager.getLogger(EditorActivityDelayer.class);
 
   private final Display display;
 

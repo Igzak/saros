@@ -1,7 +1,8 @@
 package saros.ui.actions;
 
 import java.util.List;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.jface.action.Action;
 import org.eclipse.jface.action.ActionContributionItem;
 import org.eclipse.jface.action.IMenuCreator;
@@ -34,7 +35,7 @@ public class ChangeXMPPAccountAction extends Action implements IMenuCreator, Dis
 
   public static final String ACTION_ID = ChangeXMPPAccountAction.class.getName();
 
-  private static final Logger log = Logger.getLogger(ChangeXMPPAccountAction.class);
+  private static final Logger log = LogManager.getLogger(ChangeXMPPAccountAction.class);
 
   private Menu accountMenu;
 

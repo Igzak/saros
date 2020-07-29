@@ -8,7 +8,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.util.IPropertyChangeListener;
 import org.eclipse.jface.util.PropertyChangeEvent;
@@ -63,7 +64,7 @@ import saros.util.ThreadUtils;
  */
 public class ChatRoomsComposite extends ListExplanatoryComposite {
 
-  private static final Logger log = Logger.getLogger(ChatRoomsComposite.class);
+  private static final Logger log = LogManager.getLogger(ChatRoomsComposite.class);
 
   static final Color WHITE = Display.getDefault().getSystemColor(SWT.COLOR_WHITE);
 

@@ -3,7 +3,8 @@ package saros.ui.wizards.pages;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
@@ -23,7 +24,7 @@ import saros.ui.widgets.viewer.project.events.ResourceSelectionChangedEvent;
 import saros.ui.widgets.viewer.project.events.ResourceSelectionListener;
 
 public class ResourceSelectionWizardPage extends WizardPage {
-  private static final Logger log = Logger.getLogger(ResourceSelectionWizardPage.class);
+  private static final Logger log = LogManager.getLogger(ResourceSelectionWizardPage.class);
 
   private ResourceSelectionComposite resourceSelectionComposite;
 

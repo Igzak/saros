@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.core.resources.IContainer;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResourceChangeEvent;
@@ -65,7 +66,7 @@ public class SharedResourcesManager extends AbstractActivityProducer
    */
   private static final int INTERESTING_EVENTS = IResourceChangeEvent.POST_CHANGE;
 
-  private static final Logger log = Logger.getLogger(SharedResourcesManager.class);
+  private static final Logger log = LogManager.getLogger(SharedResourcesManager.class);
 
   /**
    * If the StopManager has paused the project, the SharedResourcesManager doesn't react to resource

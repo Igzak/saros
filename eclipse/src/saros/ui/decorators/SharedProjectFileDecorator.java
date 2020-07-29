@@ -10,7 +10,8 @@ import java.util.Map.Entry;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.IDecoration;
@@ -54,7 +55,8 @@ import saros.ui.util.SWTUtils;
 @Component(module = "eclipse")
 public class SharedProjectFileDecorator implements ILightweightLabelDecorator {
 
-  private static final Logger log = Logger.getLogger(SharedProjectFileDecorator.class.getName());
+  private static final Logger log =
+      LogManager.getLogger(SharedProjectFileDecorator.class.getName());
 
   private static final String IMAGE_PATH = "icons/ovr16/dot.png"; // $NON-NLS-1$
 

@@ -9,7 +9,8 @@ import java.util.Locale;
 import java.util.Set;
 import java.util.stream.Collectors;
 import org.apache.commons.lang3.tuple.Pair;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.core.resources.IContainer;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
@@ -45,7 +46,7 @@ import saros.util.ThreadUtils;
  */
 public class CollaborationUtils {
 
-  private static final Logger log = Logger.getLogger(CollaborationUtils.class);
+  private static final Logger log = LogManager.getLogger(CollaborationUtils.class);
 
   @Inject private static ISarosSessionManager sessionManager;
 

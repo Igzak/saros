@@ -1,7 +1,8 @@
 package saros.ui.actions;
 
 import java.util.List;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.jface.action.Action;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.ISelection;
@@ -36,7 +37,7 @@ public class FollowThisPersonAction extends Action implements Disposable {
 
   public static final String ACTION_ID = FollowThisPersonAction.class.getName();
 
-  private static final Logger log = Logger.getLogger(FollowThisPersonAction.class);
+  private static final Logger log = LogManager.getLogger(FollowThisPersonAction.class);
 
   protected ISessionLifecycleListener sessionLifecycleListener =
       new ISessionLifecycleListener() {

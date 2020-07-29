@@ -1,6 +1,7 @@
 package saros.editor.internal;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.ui.IFileEditorInput;
 import org.eclipse.ui.editors.text.TextFileDocumentProvider;
 import saros.SarosPluginContext;
@@ -24,7 +25,7 @@ import saros.session.User;
 @Component(module = "eclipse")
 public final class SharedDocumentProvider extends TextFileDocumentProvider {
 
-  private static final Logger log = Logger.getLogger(SharedDocumentProvider.class);
+  private static final Logger log = LogManager.getLogger(SharedDocumentProvider.class);
 
   private volatile ISarosSession session;
 

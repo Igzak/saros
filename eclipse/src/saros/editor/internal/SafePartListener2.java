@@ -1,6 +1,6 @@
 package saros.editor.internal;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.ui.IPartListener2;
 import org.eclipse.ui.IWorkbenchPartReference;
 import saros.util.ThreadUtils;

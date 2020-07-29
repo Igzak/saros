@@ -1,6 +1,7 @@
 package saros.session.resources.validation;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.core.resources.IResourceDelta;
 import org.eclipse.core.resources.mapping.ModelProvider;
 import org.eclipse.core.runtime.CoreException;
@@ -32,7 +33,7 @@ import saros.session.User.Permission;
  * realized this
  */
 public class ResourceChangeValidator extends ModelProvider {
-  private static final Logger log = Logger.getLogger(ResourceChangeValidator.class);
+  private static final Logger log = LogManager.getLogger(ResourceChangeValidator.class);
 
   /** Error code for internal use, but we don't need it. */
   private static final int ERROR_CODE = 0;

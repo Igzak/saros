@@ -1,7 +1,8 @@
 /** */
 package saros.ui.util;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Link;
 import org.eclipse.swt.widgets.Listener;
@@ -18,7 +19,7 @@ import org.eclipse.swt.widgets.Listener;
  */
 public class LinkListener implements Listener {
 
-  private Logger log = Logger.getLogger(LinkListener.class);
+  private Logger log = LogManager.getLogger(LinkListener.class);
 
   public LinkListener() {
     // default constructor

@@ -5,7 +5,8 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.ui.part.FileEditorInput;
 import saros.activities.EditorActivity;
 import saros.editor.internal.EditorAPI;
@@ -33,7 +34,7 @@ import saros.util.StackTrace;
  */
 public class RemoteWriteAccessManager extends AbstractActivityConsumer {
 
-  private static final Logger log = Logger.getLogger(RemoteWriteAccessManager.class);
+  private static final Logger log = LogManager.getLogger(RemoteWriteAccessManager.class);
 
   /** stores users and their opened files */
   private final Map<IFile, Set<User>> editorStates = new HashMap<>();

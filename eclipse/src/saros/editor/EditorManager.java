@@ -7,7 +7,8 @@ import java.util.Objects;
 import java.util.Set;
 import java.util.concurrent.Callable;
 import org.apache.commons.lang3.StringEscapeUtils;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.core.internal.utils.FileUtil;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IResource;
@@ -100,7 +101,7 @@ public class EditorManager implements IEditorManager {
    * other participants. Furthermore every Activity from other participants needs to be replayed in
    * your local editor when it is received.
    */
-  private static final Logger log = Logger.getLogger(EditorManager.class);
+  private static final Logger log = LogManager.getLogger(EditorManager.class);
 
   boolean hasWriteAccess;
 

@@ -1,6 +1,7 @@
 package saros.editor.annotations;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.preference.PreferenceConverter;
 import org.eclipse.jface.text.source.Annotation;
@@ -18,7 +19,7 @@ import saros.session.User;
  * <p>Configuration of the annotations is done in the plugin-xml.
  */
 public abstract class SarosAnnotation extends Annotation {
-  private static final Logger log = Logger.getLogger(SarosAnnotation.class);
+  private static final Logger log = LogManager.getLogger(SarosAnnotation.class);
 
   /**
    * Constant representing the amount of configured annotations for each Saros annotation type in
