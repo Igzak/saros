@@ -9,12 +9,8 @@ import saros.core.ui.eventhandler.XMPPAuthorizationHandler;
 import saros.editor.IEditorManager;
 import saros.filesystem.IPathFactory;
 import saros.filesystem.IReferencePointComparator;
-import saros.filesystem.IWorkspace;
-import saros.filesystem.checksum.IChecksumCache;
-import saros.filesystem.checksum.NullChecksumCache;
 import saros.intellij.editor.EditorManager;
 import saros.intellij.filesystem.IntellijReferencePointComparator;
-import saros.intellij.filesystem.IntellijWorkspace;
 import saros.intellij.filesystem.PathFactory;
 import saros.intellij.preferences.IntelliJPreferences;
 import saros.intellij.preferences.PropertiesComponentAdapter;
@@ -52,7 +48,6 @@ public class SarosIntellijContextFactory extends AbstractContextFactory {
       // UI handlers
       Component.create(NegotiationHandler.class),
       Component.create(XMPPAuthorizationHandler.class),
-      Component.create(IChecksumCache.class, NullChecksumCache.class),
       Component.create(UISynchronizer.class, IntellijUISynchronizer.class),
       Component.create(IPreferenceStore.class, PropertiesComponentAdapter.class),
       Component.create(Preferences.class, IntelliJPreferences.class),
@@ -74,8 +69,6 @@ public class SarosIntellijContextFactory extends AbstractContextFactory {
 
     // Saros Core Path Support
     container.addComponent(IPathFactory.class, new PathFactory());
-
-    container.addComponent(IWorkspace.class, IntellijWorkspace.class);
 
     for (Component component : getContextComponents()) {
       container.addComponent(component.getBindKey(), component.getImplementation());
