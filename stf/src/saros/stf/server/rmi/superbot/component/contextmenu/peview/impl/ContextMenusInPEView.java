@@ -101,7 +101,7 @@ public final class ContextMenusInPEView extends StfRemoteObject implements ICont
 
     shell.activate();
     shell.bot().textWithLabel("Project name:").setText(target);
-    shell.bot().button(OK).click();
+    shell.bot().button(COPY).click();
     shell.bot().waitUntil(Conditions.shellCloses(shell), SarosSWTBotPreferences.SAROS_LONG_TIMEOUT);
 
     new SWTBot().sleep(1000);
@@ -112,6 +112,12 @@ public final class ContextMenusInPEView extends StfRemoteObject implements ICont
   }
 
   @Override
+  public void openShareProjects() {
+    treeItem.select();
+    ContextMenuHelper.clickContextMenu(tree, SHARE_RESOURCES);
+  }
+
+  @Override
   public void openWith(String editorType) throws RemoteException {
     treeItem.select();
     ContextMenuHelper.clickContextMenu(tree, CM_OPEN_WITH, CM_OTHER);
@@ -119,7 +125,7 @@ public final class ContextMenusInPEView extends StfRemoteObject implements ICont
     SWTBotShell shell = new SWTBot().shell(SHELL_EDITOR_SELECTION);
 
     shell.activate();
-    shell.bot().table().getTableItem(editorType).select();
+    shell.bot().tree().getTreeItem(editorType).select();
     shell.bot().button(OK).click();
     shell.bot().waitUntil(Conditions.shellCloses(shell));
   }

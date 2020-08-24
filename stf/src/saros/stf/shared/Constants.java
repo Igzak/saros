@@ -44,6 +44,7 @@ public interface Constants {
    */
   // Title of Buttons
   String YES = "Yes";
+  String COPY = "Copy";
   String OK = "OK";
   String APPLY_AND_CLOSE = "Apply and Close";
   String NO = "No";
