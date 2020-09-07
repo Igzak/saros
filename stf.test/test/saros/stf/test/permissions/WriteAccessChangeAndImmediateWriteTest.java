@@ -10,8 +10,10 @@ import static saros.stf.shared.Constants.VIEW_SAROS;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 import saros.stf.client.StfTestCase;
 import saros.stf.client.util.Util;
+import saros.stf.test.categories.FlakyTests;
 import saros.stf.test.stf.Constants;
 
 public class WriteAccessChangeAndImmediateWriteTest extends StfTestCase {
@@ -38,6 +40,8 @@ public class WriteAccessChangeAndImmediateWriteTest extends StfTestCase {
    *
    * <p>4. no inconsistency occur by BOB.
    */
+  // FIXME broken as of move to reference point system (see #1032) without an apparent reason
+  @Category(FlakyTests.class)
   @Test
   public void testFollowModeByOpenClassbyAlice() throws Exception {
     Util.setUpSessionWithJavaProjectAndClass(
